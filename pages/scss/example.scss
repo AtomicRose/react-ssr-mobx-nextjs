@@ -1,0 +1,22 @@
+@import "../variable.scss";
+@import "../include-media.scss";
+@import "../fn.scss";
+// desktop css
+@include media('>tablet', 'screen') {}
+
+// large desktop css
+@include media('>desktop', 'screen') {}
+
+// xlarge desktop css
+@include media('>bigDesktop', 'screen') {}
+
+// mobile css, usuall use px2rem()
+@include media('<=tablet', 'screen') {}
+
+// small mobile css
+@include media('<=phone', 'screen') {}
+
+// usually css
+// css hack
+// IE 8 9 10 11
+@media screen\0 {}

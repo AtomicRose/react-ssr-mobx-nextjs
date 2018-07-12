@@ -1,0 +1,53 @@
+{
+  "name": "React-SSR-Mobx-NextJS-Framework",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pm2 start ecosystem.config.js",
+    "export": "next export",
+    "build-test": "cross-env NODE_ENV=production DOMAIN_USE=test next build",
+    "start-test": "cross-env NODE_ENV=production DOMAIN_USE=test PORT=${npm_config_aPort} pm2 start server/server.js --name ${npm_package_name}-test",
+    "restart-test": "pm2 restart ${npm_package_name}-test",
+    "build-alpha": "cross-env NODE_ENV=production DOMAIN_USE=alpha next build",
+    "start-alpha": "cross-env NODE_ENV=production DOMAIN_USE=alpha PORT=${npm_config_aPort} pm2 start server/server.js --name ${npm_package_name}-alpha",
+    "restart-alpha": "pm2 restart ${npm_package_name}-alpha",
+    "build-prod": "cross-env NODE_ENV=production DOMAIN_USE=production next build",
+    "start-prod": "cross-env NODE_ENV=production DOMAIN_USE=production  PORT=${npm_config_aPort} pm2 start server/server.js --name ${npm_package_name}-prod",
+    "restart-prod": "pm2 restart ${npm_package_name}-prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-css": "^0.2.0",
+    "@zeit/next-sass": "^0.2.0",
+    "antd": "^3.5.4",
+    "cross-env": "^5.1.6",
+    "isomorphic-fetch": "^2.2.1",
+    "isomorphic-unfetch": "^2.0.0",
+    "koa": "^2.5.1",
+    "koa-router": "^7.4.0",
+    "less": "^3.0.4",
+    "mobx": "^4.3.0",
+    "mobx-react": "^5.1.2",
+    "next": "^6.0.3",
+    "node-sass": "^4.9.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "7.0.0-beta.3",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-import": "^1.7.0",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "7.0.0-beta.3",
+    "babel-preset-react": "7.0.0-beta.3",
+    "babel-preset-stage-1": "7.0.0-beta.3",
+    "eslint": "^4.19.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-react": "^7.8.2",
+    "mobx-react-devtools": "^5.0.1"
+  }
+}

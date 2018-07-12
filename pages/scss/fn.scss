@@ -1,0 +1,78 @@
+$base-px: 75px;
+@function px2rem($px) {
+    @if (type_of($px) != "number") {
+        @warn "the argument $px must be the pixels number";
+    }
+    @return $px / $base-px * 1rem;
+}
+
+@mixin px2rem($property, $px-values) {
+    $rem-values: ();
+    @each $value in $px-values {
+        @if (type_of($value) == "number" and unit($value) == "px") {
+            $rem-values: append($rem-values, $value / $base-px * 1rem);
+        } @else {
+            $rem-values: append($rem-values, $value);
+        }
+    }
+    #{$property}: $rem-values;
+}
+
+@mixin px2rem-multi($property, $px-values) {
+    $rem-values: ();
+    @each $value in $px-values {
+        @if (type_of($value) == "number" and unit($value) == "px") {
+            $rem-values: append($rem-values, $value / $base-px * 1rem);
+        } @else {
+            $rem-values: append($rem-values, $value);
+        }
+    }
+    #{$property}: $rem-values;
+}
+
+@mixin px2px($property, $px-values) {
+    $px-values-1: ();
+    $px-values-2: ();
+    $px-values-3: ();
+    $px-values-4: ();
+    @each $value in $px-values {
+        @if (type_of($value) == "number" and unit($value) == "px") {
+            $px-values-1: append($px-values-1, $value / 2);
+            $px-values-2: append($px-values-2, $value * 1);
+            $px-values-3: append($px-values-3, $value / 2 * 3);
+            $px-values-4: append($px-values-4, $value / 2 * 2);
+        } @else {
+            $px-values-1: append($px-values-1, $value);
+            $px-values-2: append($px-values-2, $value);
+            $px-values-3: append($px-values-3, $value);
+            $px-values-4: append($px-values-4, $value);
+        }
+    }
+    [data-dpr="1"] & {
+        #{$property}: $px-values-1
+    }
+    [data-dpr="2"] & {
+        #{$property}: $px-values-2
+    }
+    [data-dpr="3"] & {
+        #{$property}: $px-values-3
+    }
+    [data-dpr="4"] & {
+        #{$property}: $px-values-4
+    }
+}
+
+@mixin check-more($line-height, $line-num) {
+    max-height: px2rem($line-height * $line-num);
+    line-height: px2rem($line-height);
+    overflow: hidden; /* Hide text that goes beyond the boundaries of the div */
+    &:before {
+        content: ' ... 查看更多';
+        background: #fff;
+        transform: translateY(px2rem($line-height * $line-num - $line-height));
+        display: inline-block;
+        float: right;
+        position: relative;
+        color: $color-light;
+    }
+}
