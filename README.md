@@ -2,9 +2,25 @@
 
 The framework used react, nextjs, mobx. Also you can use antd.
 
-## version 1.0.2
+## version 1.0.3
 
 ## Update Logs
+
+### v1.0.3
+
+* Modify the `/pages/_app.js`. Now you can use the mobx store in antd's Form component.
+
+``` javascript
+export default Form.create({
+    onFieldsChange: (props, fields) => {
+        // now, props include mobx's rootStore.
+    },
+    mapPropsToFields: (props) => {
+        // now, props include mobx's rootStore.
+        return {}
+    }
+})(ExampleModule)
+```
 
 ### v1.0.2
 
@@ -35,7 +51,7 @@ You could set the default port in this file. In line `const PORT = process.env.P
 
 ### Step 4
 
-Run the command `npm run dev`
+Run the command `npm run dev`. Then you can view at http://localhost:3000
 
 ## More operations
 
@@ -50,11 +66,11 @@ You can start the server through another prot, just setting `aPort`.
 
 ### Compile file
 
-You can edit all compile configs in this file `next.config.js`. In fact, it includes much webpack configs. Yep, you can setting the application compile configs as the same as `webpack.config.js`
+You can edit all compile configs in this file `next.config.js`. In fact, it includes much webpack configs. Yep, you can setting the application compile configs as the same as `webpack.config.js`.
 
 ### Set alias
 
-The webpack includes much usefull plugins. One of these, you can set the alias in config file. Then you can use it instead the relative path string like `./../../` when you import modules.
+The webpack includes much usefull plugins. One of these, you can set the alias in config file. Then you can use it instead of the relative path string like `./../../`.
 
 ### Running environment
 
