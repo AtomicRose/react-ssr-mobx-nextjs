@@ -2,9 +2,34 @@
 
 The framework used react, nextjs, mobx. Also you can use antd.
 
-## version 1.0.3
+## version 1.0.4
 
 ## Update Logs
+
+### v1.0.4
+
+Add `next-optimized-images` plugins support. Now you can use images like this:
+
+``` javascript
+import React from 'react';
+
+export default () => (
+  <div>
+    <img src={require('./images/my-image.jpg')} />
+    <img src={require('./images/my-small-image.png')} />
+    <img src={require('./images/my-icon.svg')} />
+  </div>
+);
+```
+
+``` css
+.Header {
+  background-image: url('./images/my-image.jpg');
+}
+```
+
+Detail see: https://github.com/cyrilwanner/next-optimized-images
+
 
 ### v1.0.3
 

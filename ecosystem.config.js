@@ -1,4 +1,8 @@
 module.exports = {
+  /**
+   * Application configuration section
+   * http://pm2.keymetrics.io/docs/usage/application-declaration/
+   */
   apps: [
 
     // First application
@@ -14,7 +18,8 @@ module.exports = {
         NODE_ENV: 'production'
       },
       watch: [
-        "server"
+        "server",
+        "next.config.js"
       ]
     }
   ]
