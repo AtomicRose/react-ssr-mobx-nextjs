@@ -2,9 +2,13 @@
 
 The framework used react, nextjs, mobx. Also you can use antd.
 
-## version 1.0.4
+## version 1.0.5
 
 ## Update Logs
+
+### v1.0.5
+
+Fixed some bug.
 
 ### v1.0.4
 

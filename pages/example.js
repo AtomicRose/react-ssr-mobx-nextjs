@@ -10,6 +10,9 @@ import Head from 'next/head'
 @observer
 class Error extends React.Component {
     static async getInitialProps() {
+        const res = await fetch('https://api.github.com/repos/zeit/next.js')
+        const json = await res.json()
+        return { stars: json.stargazers_count }
     }
     constructor(props) {
         super(props)
@@ -32,6 +35,7 @@ class Error extends React.Component {
                 <Head>
                     <title>Example</title>
                 </Head>
+                <p>Next.js has {this.props.stars} ⭐️</p>
                 <p>{langText.example.pageError}</p>
                 <Link href={`/${changeLang}/example`}>
                     <button>change language</button>

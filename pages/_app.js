@@ -26,14 +26,14 @@ class PropComponent extends React.Component {
 
 
 class MyApp extends App {
-    static async getInitialProps({ Component, router, ctx, req }) {
+    static async getInitialProps({ Component, router, ctx }) {
         let pageProps = {}
 
         if (Component.getInitialProps) {
             // getInitialProps钩子，
             pageProps = await Component.getInitialProps(ctx)
         }
-        const isServer = !!req
+        const isServer = !!ctx.req
         return { pageProps, isServer }
     }
     constructor(props) {
@@ -46,7 +46,7 @@ class MyApp extends App {
         let lang = I18N.isSupported(router.asPath.replace(router.pathname, '').replace('/', ''))
 
         return (<Provider>
-            <PropComponent {...pageProps} Component={Component} rootStore={this.rootStore} language={lang} router={router} />
+            <PropComponent pageProps={pageProps} Component={Component} rootStore={this.rootStore} language={lang} router={router} />
         </Provider>)
     }
 }
