@@ -12,11 +12,16 @@ class Error extends React.Component {
     static async getInitialProps() {
         const res = await fetch('https://api.github.com/repos/zeit/next.js')
         const json = await res.json()
-        return { stars: json.stargazers_count }
+        return {
+            storeData: {
+                stars: json.stargazers_count
+            }
+        }
     }
     constructor(props) {
         super(props)
         const { rootStore } = props
+        rootStore.userStore.setStars(props.storeData.stars || 0)
         /**
          * Here, you need init your page data in mobx store.
          * Usually, do some actions.
@@ -35,7 +40,8 @@ class Error extends React.Component {
                 <Head>
                     <title>Example</title>
                 </Head>
-                <p>Next.js has {this.props.stars} ⭐️</p>
+                <p>Next.js has {this.props.storeData.stars} ⭐️</p>
+                <p>Next.js has {rootStore.userStore.stars} ⭐️(read data from mobx store)</p>
                 <p>{langText.example.pageError}</p>
                 <Link href={`/${changeLang}/example`}>
                     <button>change language</button>
