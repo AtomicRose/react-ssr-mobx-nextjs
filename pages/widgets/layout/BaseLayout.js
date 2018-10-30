@@ -1,12 +1,10 @@
 import React from 'react'
-import Head from 'next/head'
 import { Provider } from 'mobx-react'
 import { initRootStore } from 'STORE/RootStore'
 import DevTools from 'mobx-react-devtools'
-import Header from '../widgets/Header'
+import Header from 'WIDGETS/Header'
 
-
-class Layout extends React.Component {
+class BaseLayout extends React.Component {
 
     static getInitialProps({ req }) {
         const isServer = !!req
@@ -31,4 +29,4 @@ class Layout extends React.Component {
 }
 
 
-export default Layout
+export default BaseLayout

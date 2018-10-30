@@ -1,6 +1,6 @@
 {
   "name": "React-SSR-Mobx-NextJS-Framework",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,18 +20,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@zeit/next-css": "^0.2.0",
-    "@zeit/next-sass": "^0.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
     "antd": "^3.5.4",
     "cross-env": "^5.1.6",
     "isomorphic-fetch": "^2.2.1",
-    "isomorphic-unfetch": "^2.0.0",
+    "isomorphic-unfetch": "^3.0.0",
     "koa": "^2.5.1",
     "koa-router": "^7.4.0",
     "less": "^3.0.4",
-    "mobx": "^4.3.0",
+    "mobx": "^5.5.2",
     "mobx-react": "^5.1.2",
-    "next": "^6.1.1",
+    "next": "^7.0.2",
     "next-compose-plugins": "^2.1.1",
     "next-optimized-images": "^1.4.1",
     "next-progressbar": "^1.0.0",
@@ -40,17 +41,16 @@
     "react-dom": "^16.3.2"
   },
   "devDependencies": {
-    "babel-core": "7.0.0-beta.3",
-    "babel-eslint": "^8.2.3",
-    "babel-plugin-import": "^1.7.0",
-    "babel-plugin-transform-decorators": "^6.24.1",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-es2015": "7.0.0-beta.3",
-    "babel-preset-react": "7.0.0-beta.3",
-    "babel-preset-stage-1": "7.0.0-beta.3",
-    "eslint": "^4.19.1",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-react": "^7.8.2",
-    "mobx-react-devtools": "^5.0.1"
+    "mobx-react-devtools": "^6.0.3",
+    "webpack": "^4.4.0"
   }
 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/webpack/static\\development\\pages\\_app.js.6c034354971ad4551c95.hot-update.js","sources":["webpack:///./pages/widgets/layout/index.js"],"sourcesContent":["import BaseLayout from './BaseLayout'\r\nexport {\r\n    BaseLayout\r\n}"],"mappings":";;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACA;;;;;;;;;;;;;;;;;;;;;;;A","sourceRoot":""}

@@ -1,0 +1,40 @@
+{
+  "./noop": [
+    {
+      "id": "./node_modules/_next@7.0.2@next/dist/client/noop.js",
+      "name": "./node_modules/_next@7.0.2@next/dist/client/noop.js",
+      "file": "static/chunks/0.js",
+      "publicPath": "static/chunks/0.js"
+    }
+  ],
+  "SCSS/main.scss": [
+    {
+      "id": "./pages/source/scss/main.scss",
+      "name": "./pages/source/scss/main.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "undefined": [
+    {
+      "id": 4,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 5,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "SCSS/index.scss": [
+    {
+      "id": "./pages/source/scss/index.scss",
+      "name": "./pages/source/scss/index.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ]
+}

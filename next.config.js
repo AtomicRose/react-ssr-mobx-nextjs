@@ -20,10 +20,10 @@ const DEV_ENV = 'development'
 const dev = env === DEV_ENV
 
 const nextConfig = {
-    distDir: 'dist',
+    distDir: `dist_${domain_use}`,
     generateBuildId: async () => {
         // For example get the latest git commit hash here
-        return process.env.npm_package_name || 'ShinezoneApplication'
+        return process.env.npm_package_name || 'MyApplication'
     },
     publicRuntimeConfig: { // Will be available on both server and client
         staticFolder: '/static'
@@ -33,7 +33,7 @@ const nextConfig = {
         config.resolve = {
             alias: {
                 PAGES: path.resolve(rootPath, 'pages'),
-                SCSS: path.resolve(rootPath, 'pages/scss'),
+                SCSS: path.resolve(rootPath, 'pages/source/scss'),
                 COMPONENTS: path.resolve(rootPath, 'pages/components'),
                 WIDGETS: path.resolve(rootPath, 'pages/widgets'),
                 CONFIG: path.resolve(rootPath, 'config'),

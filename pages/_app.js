@@ -1,11 +1,11 @@
 import React from 'react'
 import { Provider, inject, observer } from 'mobx-react'
 import App, { Container } from 'next/app'
-import Layout from './layout/Layout'
+import { BaseLayout } from 'WIDGETS/layout'
 import { withRouter } from 'next/router'
 import I18N from 'I18N'
 import { initRootStore } from 'STORE/RootStore'
-
+import Head from 'next/head'
 @inject('rootStore')
 @observer
 class PropComponent extends React.Component {
@@ -14,11 +14,17 @@ class PropComponent extends React.Component {
     }
     render() {
         const { Component, pageProps, router } = this.props
+        /**
+         * for different route, you can use different layout for different page
+         */
         return (
             <Container>
-                <Layout language={this.props.language} rootStore={this.props.rootStore} router={this.props.router}>
+                <Head>
+                    <title>My Next.js Application</title>
+                </Head>
+                <BaseLayout language={this.props.language} rootStore={this.props.rootStore} router={this.props.router}>
                     <Component {...pageProps} language={this.props.language} rootStore={this.props.rootStore} router={this.props.router} />
-                </Layout>
+                </BaseLayout>
             </Container>
         )
     }

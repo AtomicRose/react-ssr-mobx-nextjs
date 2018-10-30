@@ -1,15 +1,15 @@
 const hosts = {
     production: {
-        example: 'http://ns.chaojita.cn'
+        example: 'http://api.example.com'
     },
     alpha: {
-
+        example: 'http://api.example.com'
     },
     test: {
-
+        example: 'http://api.example.com'
     },
     development: {
-        example: 'http://ns.chaojita.cn'
+        example: 'http://api.example.com'
     }
 }
 let host = hosts.production

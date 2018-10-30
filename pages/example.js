@@ -10,6 +10,9 @@ import Head from 'next/head'
 @observer
 class Error extends React.Component {
     static async getInitialProps() {
+        /**
+         * server end get data
+         */
         const res = await fetch('https://api.github.com/repos/zeit/next.js')
         const json = await res.json()
         return {
@@ -21,15 +24,10 @@ class Error extends React.Component {
     constructor(props) {
         super(props)
         const { rootStore } = props
-        rootStore.userStore.setStars(props.storeData.stars || 0)
         /**
-         * Here, you need init your page data in mobx store.
-         * Usually, do some actions.
+         * init server end data to store.
          */
-        rootStore.userStore.getUserInfo()
-    }
-    changeUserInfo() {
-        this.props.rootStore.userStore.changeUserInfo()
+        rootStore.userStore.setStars(props.storeData.stars || 0)
     }
     render() {
         const { language, store, rootStore } = this.props
@@ -46,9 +44,6 @@ class Error extends React.Component {
                 <Link href={`/${changeLang}/example`}>
                     <button>change language</button>
                 </Link>
-                <p>--------User Info---------</p>
-                <p>{`${rootStore.userStore.user ? rootStore.userStore.user.myFriend.nickName : ''}`}</p>
-                <Button htmlType="button" type="primary" onClick={() => this.changeUserInfo()}>改变用户信息</Button>
                 <Link href={`/example/antd`}>
                     <Button htmlType="button" type="danger" onClick={() => this.changeUserInfo()}>看看Antd的用法</Button>
                 </Link>

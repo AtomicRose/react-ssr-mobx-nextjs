@@ -12,7 +12,7 @@ module.exports = {
       watch: true,
       env: {
         "NODE_ENV": "development",
-        "DOMAIN_USE": "production"
+        "DOMAIN_USE": "development"
       },
       env_production: {
         NODE_ENV: 'production'

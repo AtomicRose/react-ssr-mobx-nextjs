@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/styles.chunk.css","sources":["webpack:///./pages/source/scss/main.scss","webpack:///./pages/source/scss/index.scss"],"sourcesContent":[".hello {\n  color: #f00; }\n",".aa {\n  color: green; }\n"],"mappings":"AAAA;AACA;;ACDA;AACA;;","sourceRoot":""}

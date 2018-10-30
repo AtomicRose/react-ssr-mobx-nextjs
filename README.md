@@ -2,9 +2,14 @@
 
 The framework used react, nextjs, mobx. Also you can use antd.
 
-## version 1.0.5
+## version 1.1.0
 
 ## Update Logs
+
+### v1.1.0
+
+* Update NextJS to v7.0.x
+* Update babel to v7.1.x
 
 ### v1.0.5
 
