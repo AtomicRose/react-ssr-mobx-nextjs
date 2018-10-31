@@ -5,3 +5,4 @@ public/
 npm-debug.log
 dist/
 .next/
+dist_*

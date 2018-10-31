@@ -2,11 +2,20 @@ const path = require('path')
 const webpack = require('webpack')
 const withPlugins = require('next-compose-plugins')
 const withSass = require('@zeit/next-sass')
+const withLess = require('@zeit/next-less')
 const withCSS = require('@zeit/next-css')
 const optimizedImages = require('next-optimized-images')
 const withProgressBar = require('next-progressbar')
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
+// fix: prevents error when .css files are required by node
+if (typeof require !== 'undefined') {
+    require.extensions['.css'] = (file) => { }
+}
+// fix: prevents error when .less files are required by node
+if (typeof require !== 'undefined') {
+    require.extensions['.less'] = (file) => { }
+}
 
 const rootPath = path.resolve(__dirname, './')
 
@@ -34,6 +43,7 @@ const nextConfig = {
             alias: {
                 PAGES: path.resolve(rootPath, 'pages'),
                 SCSS: path.resolve(rootPath, 'pages/source/scss'),
+                LESS: path.resolve(rootPath, 'pages/source/less'),
                 COMPONENTS: path.resolve(rootPath, 'pages/components'),
                 WIDGETS: path.resolve(rootPath, 'pages/widgets'),
                 CONFIG: path.resolve(rootPath, 'config'),
@@ -71,22 +81,54 @@ const nextConfig = {
         return config
     },
     exportPathMap: function (defaultPathMap) {
+        /**
+         * If you didn't want run the application server in node, and use nginx proxy. You can export the static page.
+         * The Object [key] is the browser path, the Object [value] is the actualPage.
+         * You can find setting in directory named server. Koa router setting.
+         */
         return {
-
+            '/': { page: '/' }
         }
     }
 }
+/**
+ * About withSass, withLess, withCss
+ * In our project, we suggest to write style use sass. And use cssModule.
+ * Now, these setting( withLess, withCss) just for ant-design. So the option [localIdentName] must be [local]
+ * You can set webpack config by yourself.
+ */
 module.exports = withPlugins([
     [withSass, {
         cssModules: true,
         cssLoaderOptions: {
-            localIdentName: '[path]___[local]___[hash:base64:5]',
+            localIdentName: '[[path]___[local]___[hash:base64:5]]'
+        },
+        sassLoaderOptions: {
+
+        },
+        postcssLoaderOptions: {
+            config: {
+                path: './'
+            }
+        }
+    }],
+    [withLess, {
+        cssModules: true,
+        cssLoaderOptions: {
+            localIdentName: '[local]'
+        },
+        lessLoaderOptions: {
+            javascriptEnabled: true,
+            modifyVars: {
+                // You can set custom theme for ant-design
+                // 'primary-color': '#1DA57A'
+            }
         }
     }],
     [withCSS, {
         cssModules: true,
         cssLoaderOptions: {
-            localIdentName: '[path]___[local]___[hash:base64:5]',
+            localIdentName: '[local]'
         }
     }],
     [optimizedImages, {

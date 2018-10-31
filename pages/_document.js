@@ -22,10 +22,6 @@ export default class MyDocument extends Document {
                 <Head>
                     {/* <title>My page title</title> */}
                     <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
-                    <link rel="stylesheet" href="/_next/static/style.css" />
-                    {/* -----Here is the antd css------ */}
-                    <link rel="stylesheet" href={`${publicRuntimeConfig.staticFolder}/css/antd.css`} />
-                    {/* -----Here is the mobile phone adaptation scheme support */}
                     <script src={`${publicRuntimeConfig.staticFolder}/js/mediascreen.js`}></script>
                 </Head>
                 <body className="custom_class">

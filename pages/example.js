@@ -29,6 +29,9 @@ class Error extends React.Component {
          */
         rootStore.userStore.setStars(props.storeData.stars || 0)
     }
+    handleGoAnt() {
+
+    }
     render() {
         const { language, store, rootStore } = this.props
         const langText = I18N.langText(language)
@@ -45,7 +48,7 @@ class Error extends React.Component {
                     <button>change language</button>
                 </Link>
                 <Link href={`/example/antd`}>
-                    <Button htmlType="button" type="danger" onClick={() => this.changeUserInfo()}>看看Antd的用法</Button>
+                    <Button htmlType="button" type="primary">看看AntDesign的用法</Button>
                 </Link>
             </div>
         )
