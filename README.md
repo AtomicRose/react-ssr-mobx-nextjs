@@ -2,9 +2,71 @@
 
 The framework used react, nextjs, mobx. Also you can use antd.
 
-## version 1.1.0
+## version 1.2.0
 
 ## Update Logs
+
+### v1.2.0
+
+* Add Debug
+
+#### How to use Debug
+
+All files are included in `utils/debug`
+
+``` shell
+import debug from 'UTILS/debug'
+```
+
+We defined 5 kinds log.
+
+``` javascript
+debug.error('Error...')
+debug.info('Info...')
+debug.warning('Warning...')
+debug.success('Success...')
+debug.log('Special log')
+```
+
+Also you can defined by yourself.
+
+``` javascript
+import createDebug from 'UTILS/debug/myDebug'
+const myDebugLog = createDebug({
+    enableBrowser: true, // default true
+    enableTerminal: false, // default false
+    categories: [
+        {
+            text: 'MyDebug',
+            fontColor: '#0066CC',
+            bgColor: '#ccffff'
+        },
+        {
+            text: 'UserInfo',
+            fontColor: '#FFFFFF',
+            bgColor: '#FF3300'
+        }
+    ]
+})
+const userInfo = {
+    name: 'Jack Ma',
+    from: 'Hangzhou'
+}
+myDebugLog('Hello', userInfo)
+```
+
+Ok, the last step. Set `localStorage`. You can set different values to filter different kinds logs.
+
+``` javascript
+localStorage.debug = '*' // all debug log will show
+localStorage.debug = 'MyDebug' // match first category 'MyDebug', other logs will hide includes 5 kinds default logs.
+// So we usually set first categories' text = __APP_NAME__. __APP_NAME__ is the global variable which you defined in package.json called name.
+localStorage.debug = 'React-SSR-Mobx-NextJS-Framework:ERROR' // match first & second categories. Now the error type logs will show.
+```
+
+#### Tips
+
+Please be careful with your sensitive data.
 
 ### v1.1.0
 

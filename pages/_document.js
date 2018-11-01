@@ -1,7 +1,7 @@
 import React from 'react'
 import getConfig from 'next/config'
 import Document, { Head, Main, NextScript } from 'next/document'
-const {serverRuntimeConfig, publicRuntimeConfig} = getConfig()
+const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
 export default class MyDocument extends Document {
     static async getInitialProps(ctx) {
         /**
@@ -15,7 +15,6 @@ export default class MyDocument extends Document {
         const initialProps = await Document.getInitialProps(ctx)
         return { ...initialProps }
     }
-
     render() {
         return (
             <html>

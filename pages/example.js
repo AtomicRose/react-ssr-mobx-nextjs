@@ -5,7 +5,7 @@ import { inject, observer } from 'mobx-react';
 import fetch from "isomorphic-fetch"
 import { Button } from 'antd'
 import Head from 'next/head'
-
+import debug from 'UTILS/debug'
 @inject('rootStore')
 @observer
 class Error extends React.Component {
@@ -31,6 +31,13 @@ class Error extends React.Component {
     }
     handleGoAnt() {
 
+    }
+    componentDidMount() {
+        debug.error('Error...')
+        debug.info('Info...')
+        debug.warning('Warning...')
+        debug.success('Success...')
+        debug.log('Special log')
     }
     render() {
         const { language, store, rootStore } = this.props

@@ -18,6 +18,8 @@
   },
   "globals": {
     "globalEnv": true,
+    "domainUse": true,
+    "__APP_NAME__": true,
     "__DEV__": true,
     "__TEST__": true,
     "__ALPHA__": true,

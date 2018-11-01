@@ -19,7 +19,11 @@ module.exports = {
       },
       watch: [
         "server",
-        "next.config.js"
+        "next.config.js",
+        "babel.config.js",
+        "eslintrc",
+        "eslintignore",
+        "postcss.config.js"
       ]
     }
   ]

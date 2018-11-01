@@ -47,6 +47,7 @@ class MyApp extends App {
         const { rootStore } = this.props
         this.rootStore = initRootStore(props.isServer)
     }
+    
     render() {
         const { Component, pageProps, router } = this.props
         let lang = I18N.isSupported(router.asPath.replace(router.pathname, '').replace('/', ''))

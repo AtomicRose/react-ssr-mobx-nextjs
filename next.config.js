@@ -18,7 +18,6 @@ if (typeof require !== 'undefined') {
 }
 
 const rootPath = path.resolve(__dirname, './')
-
 const env = process.env.NODE_ENV
 const domain_use = process.env.DOMAIN_USE
 
@@ -57,6 +56,7 @@ const nextConfig = {
             new webpack.DefinePlugin({
                 "globalEnv": JSON.stringify(env),
                 "domainUse": JSON.stringify(domain_use),
+                "__APP_NAME__": JSON.stringify(process.env.npm_package_name),
                 __DEV__: domain_use === DEV_ENV,
                 __TEST__: domain_use === TEST_ENV,
                 __ALPHA__: domain_use === ALPHA_ENV,
