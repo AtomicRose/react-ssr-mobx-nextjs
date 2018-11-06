@@ -54,6 +54,6 @@
     "eslint-plugin-react": "^7.11.1",
     "mobx-react-devtools": "^6.0.3",
     "postcss-preset-env": "^6.3.0",
-    "webpack": "^4.4.0"
+    "webpack": "4.20.1"
   }
 }
