@@ -100,7 +100,7 @@ function createDebug(op) {
         }
 
         if (global.window && global.document && global.localStorage) {
-            if (opts.enableBrowser && (categoryStr.join(':').toLowerCase().indexOf(global.localStorage.debug.toLowerCase()) === 0 || global.localStorage.debug === '*')) {
+            if (opts.enableBrowser && (categoryStr.join(':').indexOf(global.localStorage.debug) === 0 || global.localStorage.debug === '*')) {
                 console.log(browserStr.join(':') + '%c ==> ', ...browserColorStr, 'color:#999;background:none', ...args)
             }
         } else {
