@@ -1,4 +1,4 @@
-import createDebug from 'UTILS/debug/myDebug'
+import createDebug from 'UTILS/debug/createDebug'
 
 const error = createDebug({
     categories: [
