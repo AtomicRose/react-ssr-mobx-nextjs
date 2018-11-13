@@ -190,8 +190,7 @@ So, we can compile different source code through the environment parameter.
 |_config                    // application config files
 |_dist                      // compiled code
 |_pages                     // all the react pages
-    |_components            // react-components. 
-    |_layout                // application layout files
+    |_components            // react-components, suggestion atomic-design. See detail in pages/README.md
     |_scss                  // styles
     |_widgets               // react-widgets
 |_server                    // server-side-render, route
