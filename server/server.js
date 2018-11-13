@@ -11,6 +11,7 @@ const handle = app.getRequestHandler()
 
 const zh_CN_Router = require('./zh_CN')
 const en_US_Router = require('./en_US')
+const ui_Router = require('./ui')
 
 
 mobxReact.useStaticRendering(true)
@@ -20,9 +21,10 @@ app.prepare().then(() => {
     let router = new Router()
     let zh_CN = zh_CN_Router(app)
     let en_US = en_US_Router(app)
+    let ui = ui_Router(app)
     router.use('/zh_CN', zh_CN.routes(), zh_CN.allowedMethods())
     router.use('/en_US', en_US.routes(), en_US.allowedMethods())
-
+    router.use('/ui', ui.routes(), ui.allowedMethods())
 
     // --------------------------------- example config setting--------------------------------------
     router.get('/api/userInfo', (ctx, next) => {

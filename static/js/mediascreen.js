@@ -117,9 +117,6 @@ if (!window.fetch) {
 if (!window.Promise) {
     polyfillArray.push('https://cdn.staticfile.org/bluebird/3.5.0/bluebird.min.js');
 }
-if (!window.requestAnimationFrame) {
-    polyfillArray.push('/static/raf-polyfill.min.js')
-}
 if (typeof Object.assign !== 'function') {
     polyfillArray.push('https://cdn.staticfile.org/es6-shim/0.35.3/es6-shim.min.js', 'https://cdn.staticfile.org/es6-shim/0.35.3/es6-sham.min.js');
 }

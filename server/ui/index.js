@@ -1,0 +1,13 @@
+const router = require('koa-router')()
+function setRouters(nextApp) {
+    router.get('/button', async (ctx, next) => {
+        const actualPage = '/ui/button'
+        const queryParams = {
+            layout: 'ui'
+        }
+        await nextApp.render(ctx.req, ctx.res, actualPage, queryParams)
+    })
+    return router
+}
+
+module.exports = setRouters

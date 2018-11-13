@@ -1,0 +1,819 @@
+@import "../mixin/grid.scss";
+@import "../mixin/theme.scss";
+.row {
+    width: 100%;
+    display: block;
+}
+
+.col-1 {
+    width: $grid-1;
+    display: inline-block;
+}
+
+.col-2 {
+    width: $grid-2;
+    display: inline-block;
+}
+
+.col-3 {
+    width: $grid-3;
+    display: inline-block;
+}
+
+.col-4 {
+    width: $grid-4;
+    display: inline-block;
+}
+
+.col-5 {
+    width: $grid-5;
+    display: inline-block;
+}
+
+.col-6 {
+    width: $grid-6;
+    display: inline-block;
+}
+
+.col-7 {
+    width: $grid-7;
+    display: inline-block;
+}
+
+.col-8 {
+    width: $grid-8;
+    display: inline-block;
+}
+
+.col-9 {
+    width: $grid-9;
+    display: inline-block;
+}
+
+.col-10 {
+    width: $grid-10;
+    display: inline-block;
+}
+
+.col-11 {
+    width: $grid-11;
+    display: inline-block;
+}
+
+.col-12 {
+    width: $grid-12;
+    display: inline-block;
+}
+
+.col-13 {
+    width: $grid-13;
+    display: inline-block;
+}
+
+.col-14 {
+    width: $grid-14;
+    display: inline-block;
+}
+
+.col-15 {
+    width: $grid-15;
+    display: inline-block;
+}
+
+.col-16 {
+    width: $grid-16;
+    display: inline-block;
+}
+
+.col-17 {
+    width: $grid-17;
+    display: inline-block;
+}
+
+.col-18 {
+    width: $grid-18;
+    display: inline-block;
+}
+
+.col-19 {
+    width: $grid-19;
+    display: inline-block;
+}
+
+.col-20 {
+    width: $grid-20;
+    display: inline-block;
+}
+
+.col-21 {
+    width: $grid-21;
+    display: inline-block;
+}
+
+.col-22 {
+    width: $grid-22;
+    display: inline-block;
+}
+
+.col-23 {
+    width: $grid-23;
+    display: inline-block;
+}
+
+.col-24 {
+    width: $grid-24;
+    display: inline-block;
+}
+
+@media (min-width: $screen-xxs) {
+    .col-xxs-1 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-xxs-2 {
+        width: $grid-2;
+        display: inline-block;
+    }
+    .col-xxs-3 {
+        width: $grid-3;
+        display: inline-block;
+    }
+    .col-xxs-4 {
+        width: $grid-4;
+        display: inline-block;
+    }
+    .col-xxs-5 {
+        width: $grid-5;
+        display: inline-block;
+    }
+    .col-xxs-6 {
+        width: $grid-6;
+        display: inline-block;
+    }
+    .col-xxs-7 {
+        width: $grid-7;
+        display: inline-block;
+    }
+    .col-xxs-8 {
+        width: $grid-8;
+        display: inline-block;
+    }
+    .col-xxs-9 {
+        width: $grid-9;
+        display: inline-block;
+    }
+    .col-xxs-10 {
+        width: $grid-10;
+        display: inline-block;
+    }
+    .col-xxs-11 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-xxs-12 {
+        width: $grid-12;
+        display: inline-block;
+    }
+    .col-xxs-13 {
+        width: $grid-13;
+        display: inline-block;
+    }
+    .col-xxs-14 {
+        width: $grid-14;
+        display: inline-block;
+    }
+    .col-xxs-15 {
+        width: $grid-15;
+        display: inline-block;
+    }
+    .col-xxs-16 {
+        width: $grid-16;
+        display: inline-block;
+    }
+    .col-xxs-17 {
+        width: $grid-17;
+        display: inline-block;
+    }
+    .col-xxs-18 {
+        width: $grid-18;
+        display: inline-block;
+    }
+    .col-xxs-19 {
+        width: $grid-19;
+        display: inline-block;
+    }
+    .col-xxs-20 {
+        width: $grid-20;
+        display: inline-block;
+    }
+    .col-xxs-21 {
+        width: $grid-21;
+        display: inline-block;
+    }
+    .col-xxs-22 {
+        width: $grid-22;
+        display: inline-block;
+    }
+    .col-xxs-23 {
+        width: $grid-23;
+        display: inline-block;
+    }
+    .col-xxs-24 {
+        width: $grid-24;
+        display: inline-block;
+    }
+}
+
+@media (min-width: $screen-xs) {
+    .col-xs-1 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-xs-2 {
+        width: $grid-2;
+        display: inline-block;
+    }
+    .col-xs-3 {
+        width: $grid-3;
+        display: inline-block;
+    }
+    .col-xs-4 {
+        width: $grid-4;
+        display: inline-block;
+    }
+    .col-xs-5 {
+        width: $grid-5;
+        display: inline-block;
+    }
+    .col-xs-6 {
+        width: $grid-6;
+        display: inline-block;
+    }
+    .col-xs-7 {
+        width: $grid-7;
+        display: inline-block;
+    }
+    .col-xs-8 {
+        width: $grid-8;
+        display: inline-block;
+    }
+    .col-xs-9 {
+        width: $grid-9;
+        display: inline-block;
+    }
+    .col-xs-10 {
+        width: $grid-10;
+        display: inline-block;
+    }
+    .col-xs-11 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-xs-12 {
+        width: $grid-12;
+        display: inline-block;
+    }
+    .col-xs-13 {
+        width: $grid-13;
+        display: inline-block;
+    }
+    .col-xs-14 {
+        width: $grid-14;
+        display: inline-block;
+    }
+    .col-xs-15 {
+        width: $grid-15;
+        display: inline-block;
+    }
+    .col-xs-16 {
+        width: $grid-16;
+        display: inline-block;
+    }
+    .col-xs-17 {
+        width: $grid-17;
+        display: inline-block;
+    }
+    .col-xs-18 {
+        width: $grid-18;
+        display: inline-block;
+    }
+    .col-xs-19 {
+        width: $grid-19;
+        display: inline-block;
+    }
+    .col-xs-20 {
+        width: $grid-20;
+        display: inline-block;
+    }
+    .col-xs-21 {
+        width: $grid-21;
+        display: inline-block;
+    }
+    .col-xs-22 {
+        width: $grid-22;
+        display: inline-block;
+    }
+    .col-xs-23 {
+        width: $grid-23;
+        display: inline-block;
+    }
+    .col-xs-24 {
+        width: $grid-24;
+        display: inline-block;
+    }
+}
+
+@media (min-width: $screen-sm) {
+    .col-sm-1 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-sm-2 {
+        width: $grid-2;
+        display: inline-block;
+    }
+    .col-sm-3 {
+        width: $grid-3;
+        display: inline-block;
+    }
+    .col-sm-4 {
+        width: $grid-4;
+        display: inline-block;
+    }
+    .col-sm-5 {
+        width: $grid-5;
+        display: inline-block;
+    }
+    .col-sm-6 {
+        width: $grid-6;
+        display: inline-block;
+    }
+    .col-sm-7 {
+        width: $grid-7;
+        display: inline-block;
+    }
+    .col-sm-8 {
+        width: $grid-8;
+        display: inline-block;
+    }
+    .col-sm-9 {
+        width: $grid-9;
+        display: inline-block;
+    }
+    .col-sm-10 {
+        width: $grid-10;
+        display: inline-block;
+    }
+    .col-sm-11 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-sm-12 {
+        width: $grid-12;
+        display: inline-block;
+    }
+    .col-sm-13 {
+        width: $grid-13;
+        display: inline-block;
+    }
+    .col-sm-14 {
+        width: $grid-14;
+        display: inline-block;
+    }
+    .col-sm-15 {
+        width: $grid-15;
+        display: inline-block;
+    }
+    .col-sm-16 {
+        width: $grid-16;
+        display: inline-block;
+    }
+    .col-sm-17 {
+        width: $grid-17;
+        display: inline-block;
+    }
+    .col-sm-18 {
+        width: $grid-18;
+        display: inline-block;
+    }
+    .col-sm-19 {
+        width: $grid-19;
+        display: inline-block;
+    }
+    .col-sm-20 {
+        width: $grid-20;
+        display: inline-block;
+    }
+    .col-sm-21 {
+        width: $grid-21;
+        display: inline-block;
+    }
+    .col-sm-22 {
+        width: $grid-22;
+        display: inline-block;
+    }
+    .col-sm-23 {
+        width: $grid-23;
+        display: inline-block;
+    }
+    .col-sm-24 {
+        width: $grid-24;
+        display: inline-block;
+    }
+}
+
+@media (min-width: $screen-md) {
+    .col-md-1 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-md-2 {
+        width: $grid-2;
+        display: inline-block;
+    }
+    .col-md-3 {
+        width: $grid-3;
+        display: inline-block;
+    }
+    .col-md-4 {
+        width: $grid-4;
+        display: inline-block;
+    }
+    .col-md-5 {
+        width: $grid-5;
+        display: inline-block;
+    }
+    .col-md-6 {
+        width: $grid-6;
+        display: inline-block;
+    }
+    .col-md-7 {
+        width: $grid-7;
+        display: inline-block;
+    }
+    .col-md-8 {
+        width: $grid-8;
+        display: inline-block;
+    }
+    .col-md-9 {
+        width: $grid-9;
+        display: inline-block;
+    }
+    .col-md-10 {
+        width: $grid-10;
+        display: inline-block;
+    }
+    .col-md-11 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-md-12 {
+        width: $grid-12;
+        display: inline-block;
+    }
+    .col-md-13 {
+        width: $grid-13;
+        display: inline-block;
+    }
+    .col-md-14 {
+        width: $grid-14;
+        display: inline-block;
+    }
+    .col-md-15 {
+        width: $grid-15;
+        display: inline-block;
+    }
+    .col-md-16 {
+        width: $grid-16;
+        display: inline-block;
+    }
+    .col-md-17 {
+        width: $grid-17;
+        display: inline-block;
+    }
+    .col-md-18 {
+        width: $grid-18;
+        display: inline-block;
+    }
+    .col-md-19 {
+        width: $grid-19;
+        display: inline-block;
+    }
+    .col-md-20 {
+        width: $grid-20;
+        display: inline-block;
+    }
+    .col-md-21 {
+        width: $grid-21;
+        display: inline-block;
+    }
+    .col-md-22 {
+        width: $grid-22;
+        display: inline-block;
+    }
+    .col-md-23 {
+        width: $grid-23;
+        display: inline-block;
+    }
+    .col-md-24 {
+        width: $grid-24;
+        display: inline-block;
+    }
+}
+
+@media (min-width: $screen-lg) {
+    .col-lg-1 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-lg-2 {
+        width: $grid-2;
+        display: inline-block;
+    }
+    .col-lg-3 {
+        width: $grid-3;
+        display: inline-block;
+    }
+    .col-lg-4 {
+        width: $grid-4;
+        display: inline-block;
+    }
+    .col-lg-5 {
+        width: $grid-5;
+        display: inline-block;
+    }
+    .col-lg-6 {
+        width: $grid-6;
+        display: inline-block;
+    }
+    .col-lg-7 {
+        width: $grid-7;
+        display: inline-block;
+    }
+    .col-lg-8 {
+        width: $grid-8;
+        display: inline-block;
+    }
+    .col-lg-9 {
+        width: $grid-9;
+        display: inline-block;
+    }
+    .col-lg-10 {
+        width: $grid-10;
+        display: inline-block;
+    }
+    .col-lg-11 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-lg-12 {
+        width: $grid-12;
+        display: inline-block;
+    }
+    .col-lg-13 {
+        width: $grid-13;
+        display: inline-block;
+    }
+    .col-lg-14 {
+        width: $grid-14;
+        display: inline-block;
+    }
+    .col-lg-15 {
+        width: $grid-15;
+        display: inline-block;
+    }
+    .col-lg-16 {
+        width: $grid-16;
+        display: inline-block;
+    }
+    .col-lg-17 {
+        width: $grid-17;
+        display: inline-block;
+    }
+    .col-lg-18 {
+        width: $grid-18;
+        display: inline-block;
+    }
+    .col-lg-19 {
+        width: $grid-19;
+        display: inline-block;
+    }
+    .col-lg-20 {
+        width: $grid-20;
+        display: inline-block;
+    }
+    .col-lg-21 {
+        width: $grid-21;
+        display: inline-block;
+    }
+    .col-lg-22 {
+        width: $grid-22;
+        display: inline-block;
+    }
+    .col-lg-23 {
+        width: $grid-23;
+        display: inline-block;
+    }
+    .col-lg-24 {
+        width: $grid-24;
+        display: inline-block;
+    }
+}
+
+@media (min-width: $screen-xl) {
+    .col-xl-1 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-xl-2 {
+        width: $grid-2;
+        display: inline-block;
+    }
+    .col-xl-3 {
+        width: $grid-3;
+        display: inline-block;
+    }
+    .col-xl-4 {
+        width: $grid-4;
+        display: inline-block;
+    }
+    .col-xl-5 {
+        width: $grid-5;
+        display: inline-block;
+    }
+    .col-xl-6 {
+        width: $grid-6;
+        display: inline-block;
+    }
+    .col-xl-7 {
+        width: $grid-7;
+        display: inline-block;
+    }
+    .col-xl-8 {
+        width: $grid-8;
+        display: inline-block;
+    }
+    .col-xl-9 {
+        width: $grid-9;
+        display: inline-block;
+    }
+    .col-xl-10 {
+        width: $grid-10;
+        display: inline-block;
+    }
+    .col-xl-11 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-xl-12 {
+        width: $grid-12;
+        display: inline-block;
+    }
+    .col-xl-13 {
+        width: $grid-13;
+        display: inline-block;
+    }
+    .col-xl-14 {
+        width: $grid-14;
+        display: inline-block;
+    }
+    .col-xl-15 {
+        width: $grid-15;
+        display: inline-block;
+    }
+    .col-xl-16 {
+        width: $grid-16;
+        display: inline-block;
+    }
+    .col-xl-17 {
+        width: $grid-17;
+        display: inline-block;
+    }
+    .col-xl-18 {
+        width: $grid-18;
+        display: inline-block;
+    }
+    .col-xl-19 {
+        width: $grid-19;
+        display: inline-block;
+    }
+    .col-xl-20 {
+        width: $grid-20;
+        display: inline-block;
+    }
+    .col-xl-21 {
+        width: $grid-21;
+        display: inline-block;
+    }
+    .col-xl-22 {
+        width: $grid-22;
+        display: inline-block;
+    }
+    .col-xl-23 {
+        width: $grid-23;
+        display: inline-block;
+    }
+    .col-xl-24 {
+        width: $grid-24;
+        display: inline-block;
+    }
+}
+
+@media (min-width: $screen-xxl) {
+    .col-xxl-1 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-xxl-2 {
+        width: $grid-2;
+        display: inline-block;
+    }
+    .col-xxl-3 {
+        width: $grid-3;
+        display: inline-block;
+    }
+    .col-xxl-4 {
+        width: $grid-4;
+        display: inline-block;
+    }
+    .col-xxl-5 {
+        width: $grid-5;
+        display: inline-block;
+    }
+    .col-xxl-6 {
+        width: $grid-6;
+        display: inline-block;
+    }
+    .col-xxl-7 {
+        width: $grid-7;
+        display: inline-block;
+    }
+    .col-xxl-8 {
+        width: $grid-8;
+        display: inline-block;
+    }
+    .col-xxl-9 {
+        width: $grid-9;
+        display: inline-block;
+    }
+    .col-xxl-10 {
+        width: $grid-10;
+        display: inline-block;
+    }
+    .col-xxl-11 {
+        width: $grid-1;
+        display: inline-block;
+    }
+    .col-xxl-12 {
+        width: $grid-12;
+        display: inline-block;
+    }
+    .col-xxl-13 {
+        width: $grid-13;
+        display: inline-block;
+    }
+    .col-xxl-14 {
+        width: $grid-14;
+        display: inline-block;
+    }
+    .col-xxl-15 {
+        width: $grid-15;
+        display: inline-block;
+    }
+    .col-xxl-16 {
+        width: $grid-16;
+        display: inline-block;
+    }
+    .col-xxl-17 {
+        width: $grid-17;
+        display: inline-block;
+    }
+    .col-xxl-18 {
+        width: $grid-18;
+        display: inline-block;
+    }
+    .col-xxl-19 {
+        width: $grid-19;
+        display: inline-block;
+    }
+    .col-xxl-20 {
+        width: $grid-20;
+        display: inline-block;
+    }
+    .col-xxl-21 {
+        width: $grid-21;
+        display: inline-block;
+    }
+    .col-xxl-22 {
+        width: $grid-22;
+        display: inline-block;
+    }
+    .col-xxl-23 {
+        width: $grid-23;
+        display: inline-block;
+    }
+    .col-xxl-24 {
+        width: $grid-24;
+        display: inline-block;
+    }
+}
