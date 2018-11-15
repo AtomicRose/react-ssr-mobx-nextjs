@@ -6,6 +6,12 @@ function setRouters(nextApp) {
             layout: 'ui'
         }
         await nextApp.render(ctx.req, ctx.res, actualPage, queryParams)
+    }).get('/grid', async (ctx, next) => {
+        const actualPage = '/ui/grid'
+        const queryParams = {
+            layout: 'ui'
+        }
+        await nextApp.render(ctx.req, ctx.res, actualPage, queryParams)
     })
     return router
 }
