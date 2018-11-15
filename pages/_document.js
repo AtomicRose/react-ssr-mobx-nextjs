@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
             <html>
                 <Head>
                     {/* <title>My page title</title> */}
-                    <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+                    {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" /> */}
                     <script src={`${publicRuntimeConfig.staticFolder}/js/mediascreen.js`}></script>
                 </Head>
                 <body className="custom_class">

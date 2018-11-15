@@ -1,4 +1,4 @@
-$base-px: 75px;
+$base-px: 37.5px;
 @function px2rem($px) {
     @if (type_of($px) != "number") {
         @warn "the argument $px must be the pixels number";
