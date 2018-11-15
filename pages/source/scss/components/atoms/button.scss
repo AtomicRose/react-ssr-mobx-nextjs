@@ -129,7 +129,6 @@
         border-radius: $btn-border-radius;
     }
 }
-
 .at-btn-group {
     width: 100%;
     .at-btn {
@@ -144,6 +143,96 @@
             margin: $block-size-1 0 0 0;
             &:first-child {
                 margin-top:  !important;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-md) {
+    .at-btn {
+        @include px2rem('padding', $btn-padding-y $btn-padding-x);
+        font-size: px2rem($btn-font-size);
+        border: px2px(1px) solid $color-bg-gray;
+        &.btn-large {
+            @include px2rem('padding', $btn-padding-y-large $btn-padding-x-large);
+            font-size: px2rem($btn-font-size-large);
+        }
+        &.btn-normal {
+            @include px2rem('padding', $btn-padding-y $btn-padding-x);
+            font-size: px2rem($btn-font-size);
+        }
+        &.btn-small {
+            @include px2rem('padding', $btn-padding-y-small $btn-padding-x-small);
+            font-size: px2rem($btn-font-size-small);
+        }
+        &.theme-default {
+            border: px2px(1px) solid $color-bg-gray;
+        }
+        &.theme-primary {
+            border: px2px(1px) solid $color-dark-primary;
+        }
+        &.theme-light-primary {
+            border: px2px(1px) solid $color-primary;
+        }
+        &.theme-dark-primary {
+            border: px2px(1px) solid $color-double-dark-primary;
+        }
+        &.theme-info {
+            border: px2px(1px) solid $color-info - 64;
+        }
+        &.theme-success {
+            border: px2px(1px) solid $color-success - 64;
+        }
+        &.theme-warning {
+            border: px2px(1px) solid $color-warning - 64;
+        }
+        &.theme-danger {
+            border: px2px(1px) solid $color-danger - 64;
+        }
+        &.theme-purple {
+            border: px2px(1px) solid $color-dark-purple;
+        }
+        &.purely {
+            border: px2px(1px) solid $color-bg-light-gray;
+            &.theme-default {
+                border: px2px(1px) solid $color-bg-light-gray;
+            }
+            &.theme-primary {
+                border: px2px(1px) solid $color-primary;
+            }
+            &.theme-light-primary {
+                border: px2px(1px) solid $color-light-primary;
+            }
+            &.theme-dark-primary {
+                border: px2px(1px) solid $color-dark-primary;
+            }
+            &.theme-info {
+                border: px2px(1px) solid $color-info;
+            }
+            &.theme-success {
+                border: px2px(1px) solid $color-success;
+            }
+            &.theme-warning {
+                border: px2px(1px) solid $color-warning;
+            }
+            &.theme-danger {
+                border: px2px(1px) solid $color-danger;
+            }
+            &.theme-purple {
+                border: px2px(1px) solid $color-light-purple;
+            }
+        }
+        &.border-radius {
+            border-radius: px2rem($btn-border-radius);
+        }
+    }
+    .at-btn-group {
+        .at-btn {
+            margin: 0 0 0 px2rem($block-size-1);
+        }
+        &.vertical {
+            .at-btn {
+                margin: px2rem($block-size-1) 0 0 0;
             }
         }
     }
