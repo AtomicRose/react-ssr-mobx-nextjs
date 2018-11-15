@@ -19,7 +19,6 @@ class PropComponent extends React.Component {
         /**
          * for different route, you can use different layout for different page
          */
-        console.log(router)
         const layout = router.query.layout
         let render = <p>404, can't match any layout</p>
         switch (layout) {

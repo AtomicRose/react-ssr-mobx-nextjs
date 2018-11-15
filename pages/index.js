@@ -6,6 +6,7 @@ const Index = (props) => {
     const { language } = props
     return (
         <div>
+            <h3>This is home page.</h3>
             <p className={sass.red}>this is home page...</p>
             <p className={less.green}>abcdefg</p>
             <Link href={`/${language}/example`}>

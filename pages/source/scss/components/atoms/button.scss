@@ -132,9 +132,18 @@
 .at-btn-group {
     width: 100%;
     .at-btn {
-        margin-left: 10px;
+        margin: 0 0 0 $block-size-1;
         &:first-child {
-            margin-left: 0;
+            margin-left: 0 !important;
+        }
+    }
+    &.vertical {
+        .at-btn {
+            display: block;
+            margin: $block-size-1 0 0 0;
+            &:first-child {
+                margin-top:  !important;
+            }
         }
     }
 }
