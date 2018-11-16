@@ -28,6 +28,14 @@
             color: $color-font-a;
             font-size: $input-font-size - 4;
         }
+        &:hover {
+            border-color: $color-primary;
+            box-shadow: 0 0 2px $color-primary
+        }
+        &:focus {
+            border-color: $color-primary;
+            box-shadow: 0 0 4px $color-primary
+        }
         &.small {
             height: $input-height-small;
             line-height: $input-height-small;
@@ -88,6 +96,79 @@
         line-height: $input-tip-height;
         padding: 0 $input-content-padding 0 $input-content-padding;
         color: $color-font-6;
+    }
+    &.default {}
+    &.success {
+        input {
+            border-color: $color-success;
+        }
+        .at-input-help {
+            color: $color-success;
+        }
+    }
+    &.info {
+        input {
+            border-color: $color-info;
+            &:hover {
+                border-color: $color-info;
+                box-shadow: 0 0 2px $color-info
+            }
+            &:focus {
+                border-color: $color-info;
+                box-shadow: 0 0 4px $color-info
+            }
+        }
+        .at-input-help {
+            color: $color-info;
+        }
+    }
+    &.primary {
+        input {
+            border-color: $color-dark-primary;
+        }
+        .at-input-help {
+            color: $color-dark-primary;
+            &:hover {
+                border-color: $color-dark-primary;
+                box-shadow: 0 0 2px $color-dark-primary
+            }
+            &:focus {
+                border-color: $color-primary;
+                box-shadow: 0 0 4px $color-primary
+            }
+        }
+    }
+    &.warning {
+        input {
+            border-color: $color-warning;
+            &:hover {
+                border-color: $color-warning;
+                box-shadow: 0 0 2px $color-warning
+            }
+            &:focus {
+                border-color: $color-warning;
+                box-shadow: 0 0 4px $color-warning
+            }
+        }
+        .at-input-help {
+            color: $color-warning;
+        }
+    }
+    &.danger {
+        input {
+            border-color: $color-danger;
+            &:hover {
+                border-color: $color-danger;
+                box-shadow: 0 0 2px $color-danger
+            }
+            &:focus {
+                border-color: $color-danger;
+                box-shadow: 0 0 4px $color-danger
+            }
+        }
+        .at-input-help {
+            color: $color-danger;
+        }
     }
 }
 

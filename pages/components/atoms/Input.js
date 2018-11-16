@@ -6,8 +6,10 @@ class Input extends React.Component {
     }
     render() {
         const size = this.props.size || 'normal'
+        const theme = this.props.theme || 'default'
+        
         return (
-            <div className={style['at-input']}>
+            <div className={`${style['at-input']} ${style[theme]}`}>
                 <input type="text" className={`${style[size]}`} style={this.props.style} placeholder={this.props.placeholder}/>
                 <div className={style['at-input-help']}>{this.props.help || ''}</div>
             </div>
