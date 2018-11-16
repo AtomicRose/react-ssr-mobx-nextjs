@@ -38,6 +38,9 @@
         var isIPhone = win.navigator.appVersion.match(/iphone/gi);
         var devicePixelRatio = win.devicePixelRatio;
         dpr = devicePixelRatio || 1;
+        if (win.screen.width > phoneTypeWidth) {
+            dpr = 1
+        }
         scale = 1 / dpr;
     }
 
@@ -57,8 +60,7 @@
 
     function refreshRem() {
         var width = docEl.getBoundingClientRect().width;
-
-
+        
         var rem = width / 10;
         if (width / dpr > phoneTranslateWidth) {
             rem = phoneTranslateWidth * dpr / 10;

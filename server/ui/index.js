@@ -13,6 +13,13 @@ function setRouters(nextApp) {
         }
         await nextApp.render(ctx.req, ctx.res, actualPage, queryParams)
     })
+        .get('/input', async (ctx, next) => {
+            const actualPage = '/ui/input'
+            const queryParams = {
+                layout: 'ui'
+            }
+            await nextApp.render(ctx.req, ctx.res, actualPage, queryParams)
+        })
     return router
 }
 

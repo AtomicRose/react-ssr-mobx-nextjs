@@ -1,6 +1,5 @@
 import React from 'react'
-import Button from 'COMPONENTS/atoms/Button'
-import ButtonGroup from 'COMPONENTS/atoms/ButtonGroup'
+import {Button, ButtonGroup} from 'COMPONENTS/at-ui'
 class ButtonPage extends React.Component {
     render() {
         return (

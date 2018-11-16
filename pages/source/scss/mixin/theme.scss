@@ -29,7 +29,7 @@ $color-bg-light-gray: #e6e6e6;
 $color-bg-white: #ffffff;
 // color border
 $color-border-gray: #cccccc;
-$color-border-light-gray: #e6e6e6;
+$color-border-light-gray: #d6d6d6;
 // color font
 $color-font-3: #333333;
 $color-font-6: #666666;
@@ -66,19 +66,28 @@ $block-size-3: 24px;
 $block-size-4: 32px;
 $block-size-5: 40px;
 $block-size-6: 48px;
-
 // button
-
 $btn-height: 42px;
 $btn-font-size: 18px;
 $btn-padding-x: $block-size-3;
 $btn-padding-y: $block-size-1;
-$btn-height-small: $btn-height - 12px;
+$btn-height-small: $btn-height - 6px;
 $btn-font-size-small: $btn-font-size - 2px;
 $btn-padding-x-small: $block-size-2;
 $btn-padding-y-small: $block-size-1;
-$btn-height-large: $btn-height + 12px;
+$btn-height-large: $btn-height + 6px;
 $btn-font-size-large: $btn-font-size + 6px;
 $btn-padding-x-large: $block-size-4;
 $btn-padding-y-large: $block-size-1;
 $btn-border-radius: 8px;
+// input
+$input-height: 32px;
+$input-height-large: $input-height + 8px;
+$input-height-small: $input-height - 8px;
+$input-font-size: 14px;
+$input-font-size-large: $input-font-size + 4px;
+$input-font-size-small: $input-font-size - 4px;
+$input-border-radius: 4px;
+$input-content-padding: $block-size-1;
+$input-tip-height: 18px;
+$input-tip-font-size: 12px;

@@ -2,25 +2,35 @@
 @import "../../mixin/theme.scss";
 @import "../../mixin/fn.scss";
 .at-btn {
-    padding: $btn-padding-y $btn-padding-x;
+    height: $btn-height;
+    line-height: $btn-height;
+    padding: 0 $btn-padding-x;
     font-size: $btn-font-size;
     background: $color-bg-light-gray;
     border: 1px solid $color-bg-gray;
     color: $color-font-6;
     cursor: pointer;
+    display: inline-block;
+    vertical-align: bottom;
     &:hover {
         background: $color-bg-light-gray - 20;
     }
     &.btn-large {
-        padding: $btn-padding-y-large $btn-padding-x-large;
+        height: $btn-height-large;
+        line-height: $btn-height-large;
+        padding: 0 $btn-padding-x-large;
         font-size: $btn-font-size-large;
     }
     &.btn-normal {
-        padding: $btn-padding-y $btn-padding-x;
+        height: $btn-height;
+        line-height: $btn-height;
+        padding: 0 $btn-padding-x;
         font-size: $btn-font-size;
     }
     &.btn-small {
-        padding: $btn-padding-y-small $btn-padding-x-small;
+        height: $btn-height-small;
+        line-height: $btn-height-small;
+        padding: 0 $btn-padding-x-small;
         font-size: $btn-font-size-small;
     }
     &.theme-default {
@@ -129,6 +139,7 @@
         border-radius: $btn-border-radius;
     }
 }
+
 .at-btn-group {
     width: 100%;
     .at-btn {
@@ -148,21 +159,27 @@
     }
 }
 
-@media (max-width: $screen-md) {
+@media screen and (max-device-width: $screen-md) {
     .at-btn {
-        @include px2rem('padding', $btn-padding-y $btn-padding-x);
+        @include px2rem('padding', 0 $btn-padding-x);
         font-size: px2rem($btn-font-size);
         border: px2px(1px) solid $color-bg-gray;
         &.btn-large {
-            @include px2rem('padding', $btn-padding-y-large $btn-padding-x-large);
+            height: px2rem($btn-height-large);
+            line-height: px2rem($btn-height-large);
+            @include px2rem('padding', 0 $btn-padding-x-large);
             font-size: px2rem($btn-font-size-large);
         }
         &.btn-normal {
-            @include px2rem('padding', $btn-padding-y $btn-padding-x);
+            height: px2rem($btn-height);
+            line-height: px2rem($btn-height);
+            @include px2rem('padding', 0 $btn-padding-x);
             font-size: px2rem($btn-font-size);
         }
         &.btn-small {
-            @include px2rem('padding', $btn-padding-y-small $btn-padding-x-small);
+            height: px2rem($btn-height-small);
+            line-height: px2rem($btn-height-small);
+            @include px2rem('padding', 0 $btn-padding-x-small);
             font-size: px2rem($btn-font-size-small);
         }
         &.theme-default {

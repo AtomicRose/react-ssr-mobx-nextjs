@@ -1,0 +1,176 @@
+@import "../../common/common.scss";
+@import "../../mixin/theme.scss";
+@import "../../mixin/fn.scss";
+.at-input {
+    input {
+        height: $input-height;
+        line-height: $input-height;
+        background: none;
+        border: 1px solid $color-border-light-gray;
+        width: 100%;
+        border-radius: $input-border-radius;
+        padding: 0 $input-content-padding 0 $input-content-padding;
+        color: $color-font-3;
+        font-size: $input-font-size;
+        :-moz-placeholder {
+            color: $color-font-a;
+            font-size: $input-font-size - 4;
+        }
+        :-ms-input-placeholder {
+            color: $color-font-a;
+            font-size: $input-font-size - 4;
+        }
+        ::-webkit-input-placeholder {
+            color: $color-font-a;
+            font-size: $input-font-size - 4;
+        }
+        ::placeholder {
+            color: $color-font-a;
+            font-size: $input-font-size - 4;
+        }
+        &.small {
+            height: $input-height-small;
+            line-height: $input-height-small;
+            font-size: $input-font-size-small;
+            :-moz-placeholder {
+                font-size: $input-font-size-small - 4;
+            }
+            :-ms-input-placeholder {
+                font-size: $input-font-size-small - 4;
+            }
+            ::-webkit-input-placeholder {
+                font-size: $input-font-size-small - 4;
+            }
+            ::placeholder {
+                font-size: $input-font-size-small - 4;
+            }
+        }
+        &.normal {
+            &.small {
+                height: $input-height;
+                line-height: $input-height;
+                font-size: $input-font-size;
+                :-moz-placeholder {
+                    font-size: $input-font-size - 4;
+                }
+                :-ms-input-placeholder {
+                    font-size: $input-font-size - 4;
+                }
+                ::-webkit-input-placeholder {
+                    font-size: $input-font-size - 4;
+                }
+                ::placeholder {
+                    font-size: $input-font-size - 4;
+                }
+            }
+        }
+        &.large {
+            height: $input-height-large;
+            line-height: $input-height-large;
+            font-size: $input-font-size-large;
+            :-moz-placeholder {
+                font-size: $input-font-size-large - 4;
+            }
+            :-ms-input-placeholder {
+                font-size: $input-font-size-large - 4;
+            }
+            ::-webkit-input-placeholder {
+                font-size: $input-font-size-large - 4;
+            }
+            ::placeholder {
+                font-size: $input-font-size-large - 4;
+            }
+        }
+    }
+    .at-input-help {
+        height: $input-tip-height;
+        font-size: $input-tip-font-size;
+        line-height: $input-tip-height;
+        padding: 0 $input-content-padding 0 $input-content-padding;
+        color: $color-font-6;
+    }
+}
+
+@media screen and (max-device-width: $screen-md) {
+    .at-input {
+        input {
+            height: px2rem($input-height);
+            line-height: px2rem($input-height);
+            border: px2px(1px) solid $color-border-light-gray;
+            border-radius: px2rem($input-border-radius);
+            padding: 0 px2rem($input-content-padding) 0 px2rem($input-content-padding);
+            font-size: px2rem($input-font-size);
+            :-moz-placeholder {
+                font-size: px2rem($input-font-size - 4);
+            }
+            :-ms-input-placeholder {
+                font-size: px2rem($input-font-size - 4);
+            }
+            ::-webkit-input-placeholder {
+                font-size: px2rem($input-font-size - 4);
+            }
+            ::placeholder {
+                font-size: px2rem($input-font-size - 4);
+            }
+            &.small {
+                height: px2rem($input-height-small);
+                line-height: px2rem($input-height-small);
+                font-size: px2rem($input-font-size-small);
+                :-moz-placeholder {
+                    font-size: px2rem($input-font-size-small - 4);
+                }
+                :-ms-input-placeholder {
+                    font-size: px2rem($input-font-size-small - 4);
+                }
+                ::-webkit-input-placeholder {
+                    font-size: px2rem($input-font-size-small - 4);
+                }
+                ::placeholder {
+                    font-size: px2rem($input-font-size-small - 4);
+                }
+            }
+            &.normal {
+                &.small {
+                    height: px2rem($input-height);
+                    line-height: px2rem($input-height);
+                    font-size: px2rem($input-font-size);
+                    :-moz-placeholder {
+                        font-size: px2rem($input-font-size - 4);
+                    }
+                    :-ms-input-placeholder {
+                        font-size: px2rem($input-font-size - 4);
+                    }
+                    ::-webkit-input-placeholder {
+                        font-size: px2rem($input-font-size - 4);
+                    }
+                    ::placeholder {
+                        font-size: px2rem($input-font-size - 4);
+                    }
+                }
+            }
+            &.large {
+                height: px2rem($input-height-large);
+                line-height: px2rem($input-height-large);
+                font-size: px2rem($input-font-size-large);
+                :-moz-placeholder {
+                    font-size: px2rem($input-font-size-large - 4);
+                }
+                :-ms-input-placeholder {
+                    font-size: px2rem($input-font-size-large - 4);
+                }
+                ::-webkit-input-placeholder {
+                    font-size: px2rem($input-font-size-large - 4);
+                }
+                ::placeholder {
+                    font-size: px2rem($input-font-size-large - 4);
+                }
+            }
+        }
+        .at-input-help {
+            height: px2rem($input-tip-height);
+            font-size: px2rem($input-tip-font-size);
+            line-height: px2rem($input-tip-height);
+            padding: 0 px2rem($input-content-padding) 0 px2rem($input-content-padding);
+        }
+    }
+}

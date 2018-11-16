@@ -10,7 +10,7 @@ class Button extends React.Component {
         const theme = `theme-${this.props.theme || 'default'}`
         const purely = this.props.purely ? 'purely' : ''
         return (
-            <button type={type} className={`${style['at-btn']} ${style[size]} ${style[theme]} ${purely ? style[purely] : ''}`}>
+            <button type={type} style={this.props.style} className={`${style['at-btn']} ${style[size]} ${style[theme]} ${purely ? style[purely] : ''}`}>
                 {this.props.children}
             </button>
         )
