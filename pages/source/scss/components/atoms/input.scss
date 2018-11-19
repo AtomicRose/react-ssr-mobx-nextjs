@@ -30,11 +30,17 @@
         }
         &:hover {
             border-color: $color-primary;
-            box-shadow: 0 0 2px $color-primary
+            box-shadow: 0 0 2px $color-primary;
         }
         &:focus {
             border-color: $color-primary;
-            box-shadow: 0 0 4px $color-primary
+            box-shadow: 0 0 4px $color-primary;
+        }
+        &:disabled {
+            border-color: $color-border-light-gray;
+            box-shadow: none;
+            background: $color-border-light-gray + 20;
+            cursor: not-allowed;
         }
         &.small {
             height: $input-height-small;
@@ -89,6 +95,7 @@
                 font-size: $input-font-size-large - 4;
             }
         }
+        
     }
     .at-input-help {
         height: $input-tip-height;

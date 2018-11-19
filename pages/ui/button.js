@@ -35,6 +35,18 @@ class ButtonPage extends React.Component {
                     <Button type="button" size="normal" theme="danger" purely={true}>Button Text</Button>
                     <Button type="button" size="normal" theme="purple" purely={true}>Button Text</Button>
                 </ButtonGroup>
+                <h3>disabled</h3>
+                <ButtonGroup>
+                    <Button type="button" size="normal" theme="default" purely={true} disabled={true}>Button Text</Button>
+                    <Button type="button" size="normal" theme="light-primary" purely={true} disabled={true}>Button Text</Button>
+                    <Button type="button" size="normal" theme="primary" purely={true} disabled={true}>Button Text</Button>
+                    <Button type="button" size="normal" theme="dark-primary" purely={true} disabled={true}>Button Text</Button>
+                    <Button type="button" size="normal" theme="info" purely={true} disabled={true}>Button Text</Button>
+                    <Button type="button" size="normal" theme="success" purely={true} disabled={true}>Button Text</Button>
+                    <Button type="button" size="normal" theme="warning" purely={true} disabled={true}>Button Text</Button>
+                    <Button type="button" size="normal" theme="danger" purely={true} disabled={true}>Button Text</Button>
+                    <Button type="button" size="normal" theme="purple" purely={true} disabled={true}>Button Text</Button>
+                </ButtonGroup>
                 <h3>Button Group vertical</h3>
                 <ButtonGroup direction="vertical" spacing={2}>
                     <Button type="button" size="normal" theme="default" purely={true}>Button Text</Button>

@@ -9,8 +9,9 @@ class Button extends React.Component {
         const size = `btn-${this.props.size || 'normal'}`
         const theme = `theme-${this.props.theme || 'default'}`
         const purely = this.props.purely ? 'purely' : ''
+        const disable = !!this.props.disabled || false
         return (
-            <button type={type} style={this.props.style} className={`${style['at-btn']} ${style[size]} ${style[theme]} ${purely ? style[purely] : ''}`}>
+            <button type={type} disabled={disable} style={this.props.style} className={`${style['at-btn']} ${style[size]} ${style[theme]} ${purely ? style[purely] : ''}`}>
                 {this.props.children}
             </button>
         )

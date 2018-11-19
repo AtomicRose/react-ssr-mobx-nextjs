@@ -63,6 +63,46 @@ class GridPage extends React.Component {
                         />
                     </Col>
                 </Row>
+                <Row>
+                    <Col xs={8}>disable</Col>
+                    <Col xs={16}>
+                        <Input
+                            placeholder="Please entry something..."
+                            help="help me... 我"
+                            helpType='danger'
+                            theme="success"
+                            disabled={true}
+                        />
+                        <Input
+                            placeholder="Please entry something..."
+                            help="help me... 我"
+                            helpType='danger'
+                            theme="info"
+                            disabled={true}
+                        />
+                        <Input
+                            placeholder="Please entry something..."
+                            help="help me... 我"
+                            helpType='danger'
+                            theme="warning"
+                            disabled={true}
+                        />
+                        <Input
+                            placeholder="Please entry something..."
+                            help="help me... 我"
+                            helpType='danger'
+                            theme="danger"
+                            disabled={true}
+                        />
+                        <Input
+                            placeholder="Please entry something..."
+                            help="help me... 我"
+                            helpType='danger'
+                            theme="default"
+                            disabled={true}
+                        />
+                    </Col>
+                </Row>
             </div>
         )
     }

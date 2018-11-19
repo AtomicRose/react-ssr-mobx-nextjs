@@ -15,6 +15,9 @@
     &:hover {
         background: $color-bg-light-gray - 20;
     }
+    &:disabled {
+        cursor: not-allowed;
+    }
     &.btn-large {
         height: $btn-height-large;
         line-height: $btn-height-large;
