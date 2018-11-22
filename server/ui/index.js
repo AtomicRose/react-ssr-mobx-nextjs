@@ -12,8 +12,7 @@ function setRouters(nextApp) {
             layout: 'ui'
         }
         await nextApp.render(ctx.req, ctx.res, actualPage, queryParams)
-    })
-        .get('/input', async (ctx, next) => {
+    }).get('/input', async (ctx, next) => {
             const actualPage = '/ui/input'
             const queryParams = {
                 layout: 'ui'

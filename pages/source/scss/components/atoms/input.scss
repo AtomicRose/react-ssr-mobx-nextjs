@@ -2,7 +2,7 @@
 @import "../../mixin/theme.scss";
 @import "../../mixin/fn.scss";
 .at-input {
-    input {
+    input[type="text"] {
         height: $input-height;
         line-height: $input-height;
         background: none;
@@ -34,7 +34,7 @@
         }
         &:focus {
             border-color: $color-primary;
-            box-shadow: 0 0 4px $color-primary;
+            box-shadow: 0px 0px 4px .8px $color-primary;
         }
         &:disabled {
             border-color: $color-border-light-gray;
@@ -95,7 +95,6 @@
                 font-size: $input-font-size-large - 4;
             }
         }
-        
     }
     .at-input-help {
         height: $input-tip-height;
@@ -106,15 +105,23 @@
     }
     &.default {}
     &.success {
-        input {
+        input[type="text"] {
             border-color: $color-success;
+            &:hover {
+                border-color: $color-success;
+                box-shadow: 0 0 2px $color-success
+            }
+            &:focus {
+                border-color: $color-success;
+                box-shadow: 0px 0px 4px .8px $color-success
+            }
         }
         .at-input-help {
             color: $color-success;
         }
     }
     &.info {
-        input {
+        input[type="text"] {
             border-color: $color-info;
             &:hover {
                 border-color: $color-info;
@@ -122,7 +129,7 @@
             }
             &:focus {
                 border-color: $color-info;
-                box-shadow: 0 0 4px $color-info
+                box-shadow: 0px 0px 4px .8px $color-info
             }
         }
         .at-input-help {
@@ -130,23 +137,23 @@
         }
     }
     &.primary {
-        input {
+        input[type="text"] {
             border-color: $color-dark-primary;
-        }
-        .at-input-help {
-            color: $color-dark-primary;
             &:hover {
                 border-color: $color-dark-primary;
                 box-shadow: 0 0 2px $color-dark-primary
             }
             &:focus {
                 border-color: $color-primary;
-                box-shadow: 0 0 4px $color-primary
+                box-shadow: 0px 0px 4px .8px $color-primary
             }
+        }
+        .at-input-help {
+            color: $color-dark-primary;
         }
     }
     &.warning {
-        input {
+        input[type="text"] {
             border-color: $color-warning;
             &:hover {
                 border-color: $color-warning;
@@ -154,7 +161,7 @@
             }
             &:focus {
                 border-color: $color-warning;
-                box-shadow: 0 0 4px $color-warning
+                box-shadow: 0px 0px 4px .8px $color-warning
             }
         }
         .at-input-help {
@@ -162,7 +169,7 @@
         }
     }
     &.danger {
-        input {
+        input[type="text"] {
             border-color: $color-danger;
             &:hover {
                 border-color: $color-danger;
@@ -170,9 +177,35 @@
             }
             &:focus {
                 border-color: $color-danger;
-                box-shadow: 0 0 4px $color-danger
+                box-shadow: 0px 0px 4px .8px $color-danger
             }
         }
+        .at-input-help {
+            color: $color-danger;
+        }
+    } // help theme
+    &.help-default {}
+    &.help-success {
+        .at-input-help {
+            color: $color-success;
+        }
+    }
+    &.help-info {
+        .at-input-help {
+            color: $color-info;
+        }
+    }
+    &.help-primary {
+        .at-input-help {
+            color: $color-dark-primary;
+        }
+    }
+    &.help-warning {
+        .at-input-help {
+            color: $color-warning;
+        }
+    }
+    &.help-danger {
         .at-input-help {
             color: $color-danger;
         }
@@ -181,7 +214,7 @@
 
 @media screen and (max-device-width: $screen-md) {
     .at-input {
-        input {
+        input[type="text"] {
             height: px2rem($input-height);
             line-height: px2rem($input-height);
             border: px2px(1px) solid $color-border-light-gray;
@@ -259,6 +292,56 @@
             font-size: px2rem($input-tip-font-size);
             line-height: px2rem($input-tip-height);
             padding: 0 px2rem($input-content-padding) 0 px2rem($input-content-padding);
+        }
+        &.success {
+            input[type="text"] {
+                &:hover {
+                    box-shadow: 0 0 px2px(2px) $color-success
+                }
+                &:focus {
+                    box-shadow: 0px 0px px2px(4px) px2px(.8px) $color-success
+                }
+            }
+        }
+        &.info {
+            input[type="text"] {
+                &:hover {
+                    box-shadow: 0 0 px2px(2px) $color-info
+                }
+                &:focus {
+                    box-shadow: 0px 0px px2px(4px) px2px(.8px) $color-info
+                }
+            }
+        }
+        &.primary {
+            input[type="text"] {
+                &:hover {
+                    box-shadow: 0 0 px2px(2px) $color-dark-primary
+                }
+                &:focus {
+                    box-shadow: 0px 0px px2px(4px) px2px(.8px) $color-primary
+                }
+            }
+        }
+        &.warning {
+            input[type="text"] {
+                &:hover {
+                    box-shadow: 0 0 px2px(2px) $color-warning
+                }
+                &:focus {
+                    box-shadow: 0px 0px px2px(4px) px2px(.8px) $color-warning
+                }
+            }
+        }
+        &.danger {
+            input[type="text"] {
+                &:hover {
+                    box-shadow: 0 0 px2px(2px) $color-danger
+                }
+                &:focus {
+                    box-shadow: 0px 0px px2px(4px) px2px(.8px) $color-danger
+                }
+            }
         }
     }
 }
