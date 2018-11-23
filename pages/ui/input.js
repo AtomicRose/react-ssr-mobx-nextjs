@@ -151,6 +151,7 @@ class GridPage extends React.Component {
                     <Col xs={8}>radio</Col>
                     <Col xs={16}>
                         <Radio checked={true}>单选框</Radio>
+                        <Radio>单选框</Radio>
                     </Col>
                 </Row>
             </div>

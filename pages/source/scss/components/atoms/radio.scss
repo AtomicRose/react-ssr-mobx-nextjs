@@ -13,7 +13,7 @@
         width: $radio-circle-r * 2;
         height: $radio-circle-r * 2;
         border-radius: $radio-circle-r;
-        border: 2px solid $color-primary;
+        border: 2px solid $color-border-gray;
         display: block;
         float: left;
         margin-top: ($radio-box-height - $radio-circle-r * 2) / 2;
@@ -30,11 +30,13 @@
             left: $radio-circle-r / 4;
         }
         &.checked {
+            border-color: $color-primary;
             &::after {
                 display: block;
             }
         }
         &.unchecked {
+            border-color: $color-border-gray;
             &::after {
                 display: none;
             }
