@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Input } from 'COMPONENTS/at-ui'
+import { Row, Col, Input, Radio } from 'COMPONENTS/at-ui'
 
 class GridPage extends React.Component {
     handleInputChange(e) {
@@ -150,7 +150,7 @@ class GridPage extends React.Component {
                 <Row style={{ marginBottom: '24px', borderBottom: "2px solid #ccc", paddingBottom: "24px" }}>
                     <Col xs={8}>radio</Col>
                     <Col xs={16}>
-                       
+                        <Radio checked={true}>单选框</Radio>
                     </Col>
                 </Row>
             </div>
