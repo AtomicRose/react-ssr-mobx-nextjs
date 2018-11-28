@@ -1,12 +1,14 @@
 import React from 'react'
-import { Row, Col, Input, Radio, RadioGroup } from 'COMPONENTS/at-ui'
+import { Row, Col, Input, Radio, RadioGroup, Checkbox, CheckboxGroup } from 'COMPONENTS/at-ui'
 
 class GridPage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             radioGroup1_value: 2,
-            radioGroup2_value: 3
+            radioGroup2_value: 3,
+            checkboxChecked: true,
+            checkboxValues: []
         }
     }
     handleInputChange(e) {
@@ -34,6 +36,20 @@ class GridPage extends React.Component {
             })
         }
 
+    }
+    handleCheckboxChange(checked, value, name) {
+        console.log(checked, value, name)
+        if (name === 'checkbox1') {
+            this.setState({
+                checkboxChecked: checked
+            })
+        }
+    }
+    handleCheckboxGroupChange(values, name) {
+        console.log(values, name)
+        this.setState({
+            checkboxValues: values
+        })
     }
     render() {
         return (
@@ -244,6 +260,41 @@ class GridPage extends React.Component {
                             value={this.state.radioGroup2_value}
                             onChange={this.handleRadioGroupChange.bind(this)}>
                         </RadioGroup>
+                    </Col>
+                </Row>
+                <Row style={{ marginBottom: '24px', borderBottom: "2px solid #ccc", paddingBottom: "24px" }}>
+                    <Col xs={8}>checkbox</Col>
+                    <Col xs={16}>
+                        <Checkbox checked={this.state.checkboxChecked} value={1} name="checkbox1" onChange={this.handleCheckboxChange.bind(this)}>复选框</Checkbox>
+                        <Checkbox name="checkbox2" value={2} onChange={this.handleCheckboxChange.bind(this)}>复选框</Checkbox>
+                        <Checkbox name="checkbox3" disabled={true} onChange={this.handleCheckboxChange.bind(this)}>复选框</Checkbox>
+                        <Checkbox checked={true} name="checkbox4" disabled={true} onChange={this.handleCheckboxChange.bind(this)}>复选框</Checkbox>
+                    </Col>
+                </Row>
+                <Row style={{ marginBottom: '24px', borderBottom: "2px solid #ccc", paddingBottom: "24px" }}>
+                    <Col xs={8}>checkbox group vertical</Col>
+                    <Col xs={16}>
+                        <CheckboxGroup
+                            vertical={true}
+                            name="radioGroup2"
+                            list={[
+                                {
+                                    text: '复选框1',
+                                    value: 1,
+                                    disabled: true
+                                },
+                                {
+                                    text: '复选框2',
+                                    value: 2
+                                },
+                                {
+                                    text: '复选框3',
+                                    value: 3
+                                }
+                            ]}
+                            value={this.state.checkboxValues}
+                            onChange={this.handleCheckboxGroupChange.bind(this)}>
+                        </CheckboxGroup>
                     </Col>
                 </Row>
             </div>
