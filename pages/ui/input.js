@@ -44,16 +44,17 @@ class GridPage extends React.Component {
                     <Col xs={16}>
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             size='large'
                         />
                         <Input
-                            placeholder="Please entry something..."
-                            help="help me... 我"
+                            htmlType="password"
+                            placeholder="Please entry password..."
+                            help="help me... I forgot password"
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             size='small'
                         />
                     </Col>
@@ -63,27 +64,27 @@ class GridPage extends React.Component {
                     <Col xs={16}>
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="success"
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="info"
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="warning"
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="danger"
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="default"
                         />
                     </Col>
@@ -93,31 +94,31 @@ class GridPage extends React.Component {
                     <Col xs={16}>
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="success"
                             helpTheme="danger"
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="info"
                             helpTheme="danger"
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="warning"
                             helpTheme="success"
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="danger"
                             helpTheme="success"
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="default"
                             helpTheme="warning"
                         />
@@ -128,33 +129,47 @@ class GridPage extends React.Component {
                     <Col xs={16}>
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="success"
                             disabled={true}
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="info"
                             disabled={true}
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="warning"
                             disabled={true}
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="danger"
                             disabled={true}
                         />
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="default"
                             disabled={true}
+                        />
+                    </Col>
+                </Row>
+                <Row style={{ marginBottom: '24px', borderBottom: "2px solid #ccc", paddingBottom: "24px" }}>
+                    <Col xs={8}>textarea</Col>
+                    <Col xs={16}>
+                        <Input
+                            htmlType="textarea"
+                            placeholder="Please entry something..."
+                            help="help me... "
+                            theme="success"
+                            onChange={this.handleInputChange.bind(this)}
+                            onFocus={this.handleFocusChange.bind(this)}
+                            onBlur={this.handleBlurChange.bind(this)}
                         />
                     </Col>
                 </Row>
@@ -163,7 +178,7 @@ class GridPage extends React.Component {
                     <Col xs={16}>
                         <Input
                             placeholder="Please entry something..."
-                            help="help me... 我"
+                            help="help me... "
                             theme="success"
                             onChange={this.handleInputChange.bind(this)}
                             onFocus={this.handleFocusChange.bind(this)}
