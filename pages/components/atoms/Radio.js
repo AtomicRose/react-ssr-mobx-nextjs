@@ -11,23 +11,24 @@ class Radio extends React.Component {
         this.setState({
             checked: !!e.target.checked
         })
-        console.log(e.target.checked)
+        this.props.onChange && this.props.onChange(e.target.checked, this.props.value || 'undefined', this.props.name || 'undefined')
     }
     render() {
         const radioId = new Date().getTime().toString()
+        const { disabled, value } = this.props
         const { checked } = this.state
+        const radioChecked = (value !== undefined && this.props.checked !== undefined) ? this.props.checked : checked
         return (
-            <div className={style['at-radio']}>
-                <label htmlFor={radioId}
-                    className={`${style['radio-icon']} ${style[checked ? 'checked' : 'unchecked']}`}
-                    style={this.props.radioStyle}></label>
-                <input type="radio"
-                    value={this.props.value}
-                    onChange={(e) => this.handleRadioChange(e)}
-                    checked={checked}
-                    disabled={this.props.disabled}
-                    id={radioId} />
-                <span className={style['radio-text']} style={this.props.radioTextStyle}>{this.props.children}</span>
+            <div className={`${style['at-radio']} ${style[radioChecked ? 'checked' : 'unchecked']} ${style[disabled ? 'disabled' : 'enabled']}`}>
+                <label>
+                    <input type="radio"
+                        name={this.props.name}
+                        onChange={(e) => this.handleRadioChange(e)}
+                        checked={radioChecked}
+                        disabled={this.props.disabled} />
+                    <span className={`${style['radio-icon']}`} style={this.props.radioStyle}></span>
+                    <span className={style['radio-text']} style={this.props.radioTextStyle}>{this.props.children}</span>
+                </label>
             </div>
         )
     }

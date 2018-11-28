@@ -29,24 +29,75 @@
             top: $radio-circle-r / 4;
             left: $radio-circle-r / 4;
         }
-        &.checked {
-            border-color: $color-primary;
-            &::after {
-                display: block;
-            }
-        }
-        &.unchecked {
-            border-color: $color-border-gray;
-            &::after {
-                display: none;
-            }
-        }
     }
     .radio-text {
         margin-left: $radio-padding;
         font-size: $radio-font-size;
         color: $color-font-3;
     }
+    &.checked {
+        .radio-icon {
+            border-color: $color-primary;
+            &::after {
+                display: block;
+            }
+        }
+    }
+    &.unchecked {
+        .radio-icon {
+            border-color: $color-border-gray;
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &.disabled {
+        cursor: not-allowed;
+        .radio-icon {
+            border-color: $color-border-light-gray;
+            cursor: not-allowed;
+            &::after {
+                background: $color-border-light-gray;
+            }
+        }
+        .radio-text {
+            cursor: not-allowed;
+            color: $color-border-light-gray;
+        }
+    }
+    &.enabled {}
 }
 
-@media screen and (max-device-width: $screen-md) {}
+.at-radio-group {
+    &.vertical {
+        .at-radio {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-device-width: $screen-md) {
+    .at-radio {
+        height: px2rem($radio-box-height);
+        line-height: px2rem($radio-box-height);
+        padding: 0 px2rem($radio-padding) 0 ($radio-padding);
+        .radio-icon {
+            width: px2rem($radio-circle-r * 2);
+            height: px2rem($radio-circle-r * 2);
+            border-radius: px2rem($radio-circle-r);
+            border: px2px(2px) solid $color-border-gray;
+            margin-top: px2rem(($radio-box-height - $radio-circle-r * 2) / 2);
+            &::after {
+                width: px2rem($radio-circle-r);
+                height: px2rem($radio-circle-r);
+                border-radius: px2rem($radio-circle-r / 2);
+                top: px2rem($radio-circle-r / 2.5);
+                left: px2rem($radio-circle-r / 2.5);
+            }
+        }
+        .radio-text {
+            margin-left: px2rem($radio-padding);
+            font-size: px2rem($radio-font-size);
+        }
+    }
+}

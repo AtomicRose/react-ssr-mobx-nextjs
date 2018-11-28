@@ -1,7 +1,14 @@
 import React from 'react'
-import { Row, Col, Input, Radio } from 'COMPONENTS/at-ui'
+import { Row, Col, Input, Radio, RadioGroup } from 'COMPONENTS/at-ui'
 
 class GridPage extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            radioGroup1_value: 2,
+            radioGroup2_value: 3
+        }
+    }
     handleInputChange(e) {
         console.log(e.target.value)
     }
@@ -10,6 +17,23 @@ class GridPage extends React.Component {
     }
     handleBlurChange(e) {
         console.log(e.target.value)
+    }
+    handleRadioChange(checked, value, name) {
+        console.log(checked, value, name)
+    }
+    handleRadioGroupChange(checked, value, name) {
+        console.log(checked, value, name)
+        if (name === 'radioGroup') {
+            this.setState({
+                radioGroup1_value: value
+            })
+        }
+        if (name === 'radioGroup2') {
+            this.setState({
+                radioGroup2_value: value
+            })
+        }
+
     }
     render() {
         return (
@@ -150,8 +174,61 @@ class GridPage extends React.Component {
                 <Row style={{ marginBottom: '24px', borderBottom: "2px solid #ccc", paddingBottom: "24px" }}>
                     <Col xs={8}>radio</Col>
                     <Col xs={16}>
-                        <Radio checked={true}>单选框</Radio>
-                        <Radio>单选框</Radio>
+                        <Radio checked={true} value={1} name="radio1" onChange={this.handleRadioChange.bind(this)}>单选框</Radio>
+                        <Radio name="radio2" value={2} onChange={this.handleRadioChange.bind(this)}>单选框</Radio>
+                        <Radio name="radio3" disabled={true} onChange={this.handleRadioChange.bind(this)}>单选框</Radio>
+                        <Radio checked={true} name="radio4" disabled={true} onChange={this.handleRadioChange.bind(this)}>单选框</Radio>
+                    </Col>
+                </Row>
+                <Row style={{ marginBottom: '24px', borderBottom: "2px solid #ccc", paddingBottom: "24px" }}>
+                    <Col xs={8}>radio group</Col>
+                    <Col xs={16}>
+                        <RadioGroup
+                            name="radioGroup"
+                            list={[
+                                {
+                                    text: '单选框1',
+                                    value: 1,
+                                    disabled: true
+                                },
+                                {
+                                    text: '单选框2',
+                                    value: 2
+                                },
+                                {
+                                    text: '单选框3',
+                                    value: 3
+                                }
+                            ]}
+                            value={this.state.radioGroup1_value}
+                            onChange={this.handleRadioGroupChange.bind(this)}>
+                        </RadioGroup>
+                    </Col>
+                </Row>
+                <Row style={{ marginBottom: '24px', borderBottom: "2px solid #ccc", paddingBottom: "24px" }}>
+                    <Col xs={8}>radio group vertical</Col>
+                    <Col xs={16}>
+                        <RadioGroup
+                            vertical={true}
+                            name="radioGroup2"
+                            list={[
+                                {
+                                    text: '单选框1',
+                                    value: 1,
+                                    disabled: true
+                                },
+                                {
+                                    text: '单选框2',
+                                    value: 2
+                                },
+                                {
+                                    text: '单选框3',
+                                    value: 3
+                                }
+                            ]}
+                            value={this.state.radioGroup2_value}
+                            onChange={this.handleRadioGroupChange.bind(this)}>
+                        </RadioGroup>
                     </Col>
                 </Row>
             </div>

@@ -4,6 +4,7 @@ import Col from 'COMPONENTS/atoms/Col'
 import Row from 'COMPONENTS/atoms/Row'
 import Input from 'COMPONENTS/atoms/Input'
 import Radio from 'COMPONENTS/atoms/Radio'
+import RadioGroup from 'COMPONENTS/atoms/RadioGroup'
 
 export {
     Button,
@@ -11,5 +12,6 @@ export {
     Col,
     Row,
     Input,
-    Radio
+    Radio,
+    RadioGroup
 }
