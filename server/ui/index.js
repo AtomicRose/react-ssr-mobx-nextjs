@@ -24,7 +24,13 @@ function setRouters(nextApp) {
             layout: 'ui'
         }
         await nextApp.render(ctx.req, ctx.res, actualPage, queryParams)
-    })
+        }).get('/dialog', async (ctx, next) => {
+            const actualPage = '/ui/dialog'
+            const queryParams = {
+                layout: 'ui'
+            }
+            await nextApp.render(ctx.req, ctx.res, actualPage, queryParams)
+        })
     return router
 }
 
