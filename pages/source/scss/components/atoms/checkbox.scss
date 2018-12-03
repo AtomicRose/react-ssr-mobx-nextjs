@@ -82,7 +82,7 @@
         .checkbox-icon {
             width: px2rem($checkbox-circle-r * 2);
             height: px2rem($checkbox-circle-r * 2);
-            border: px2px(2px) solid $color-border-gray;
+            @include px2px('border', 2px solid $color-border-gray);
             margin-top: px2rem(($checkbox-box-height - $checkbox-circle-r * 2) / 2);
             &::after {
                 width: px2rem($checkbox-circle-r);

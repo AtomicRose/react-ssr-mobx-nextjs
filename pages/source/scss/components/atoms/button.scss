@@ -166,7 +166,7 @@
     .at-btn {
         @include px2rem('padding', 0 $btn-padding-x);
         font-size: px2rem($btn-font-size);
-        border: px2px(1px) solid $color-bg-gray;
+        @include px2px('border', 1px solid $color-bg-gray);
         &.btn-large {
             height: px2rem($btn-height-large);
             line-height: px2rem($btn-height-large);
@@ -186,60 +186,60 @@
             font-size: px2rem($btn-font-size-small);
         }
         &.theme-default {
-            border: px2px(1px) solid $color-bg-gray;
+            @include px2px('border', 1px solid $color-bg-gray);
         }
         &.theme-primary {
-            border: px2px(1px) solid $color-dark-primary;
+            @include px2px('border', 1px solid $color-dark-primary);
         }
         &.theme-light-primary {
-            border: px2px(1px) solid $color-primary;
+            @include px2px('border', 1px solid $color-primary);
         }
         &.theme-dark-primary {
-            border: px2px(1px) solid $color-double-dark-primary;
+            @include px2px('border', 1px solid $color-double-dark-primary);
         }
         &.theme-info {
-            border: px2px(1px) solid $color-info - 64;
+            @include px2px('border', 1px solid $color-info - 64);
         }
         &.theme-success {
-            border: px2px(1px) solid $color-success - 64;
+            @include px2px('border', 1px solid $color-success - 64);
         }
         &.theme-warning {
-            border: px2px(1px) solid $color-warning - 64;
+            @include px2px('border', 1px solid $color-warning - 64);
         }
         &.theme-danger {
-            border: px2px(1px) solid $color-danger - 64;
+            @include px2px('border', 1px solid $color-danger - 64);
         }
         &.theme-purple {
-            border: px2px(1px) solid $color-dark-purple;
+            @include px2px('border', 1px solid $color-dark-purple);
         }
         &.purely {
-            border: px2px(1px) solid $color-bg-light-gray;
+            @include px2px('border', 1px solid $color-bg-light-gray);
             &.theme-default {
-                border: px2px(1px) solid $color-bg-light-gray;
+                @include px2px('border', 1px solid $color-bg-light-gray);
             }
             &.theme-primary {
-                border: px2px(1px) solid $color-primary;
+                @include px2px('border', 1px solid $color-primary);
             }
             &.theme-light-primary {
-                border: px2px(1px) solid $color-light-primary;
+                @include px2px('border', 1px solid $color-light-primary);
             }
             &.theme-dark-primary {
-                border: px2px(1px) solid $color-dark-primary;
+                @include px2px('border', 1px solid $color-dark-primary);
             }
             &.theme-info {
-                border: px2px(1px) solid $color-info;
+                @include px2px('border', 1px solid $color-info);
             }
             &.theme-success {
-                border: px2px(1px) solid $color-success;
+                @include px2px('border', 1px solid $color-success);
             }
             &.theme-warning {
-                border: px2px(1px) solid $color-warning;
+                @include px2px('border', 1px solid $color-warning);
             }
             &.theme-danger {
-                border: px2px(1px) solid $color-danger;
+                @include px2px('border', 1px solid $color-danger);
             }
             &.theme-purple {
-                border: px2px(1px) solid $color-light-purple;
+                @include px2px('border', 1px solid $color-light-purple);
             }
         }
         &.border-radius {

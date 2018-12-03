@@ -1,0 +1,188 @@
+@import "../../common/common.scss";
+@import "../../mixin/theme.scss";
+@import "../../mixin/fn.scss";
+.at-spinner {
+    display: inline-block;
+    padding: 16px;
+    .loading {
+        text-align: center;
+        height: 16px;
+        .line {
+            width: 2px;
+            height: 16px;
+            background: $spinner-loading-color;
+            margin: 0 2px;
+            display: inline-block;
+            opacity: 0;
+            animation: opacityLoading 1000ms infinite ease-in-out;
+        }
+        .line-1 {
+            animation-delay: 800ms;
+        }
+        .line-2 {
+            animation-delay: 600ms;
+        }
+        .line-3 {
+            animation-delay: 400ms;
+        }
+        .line-4 {
+            animation-delay: 200ms;
+        }
+        .line-5 {
+            animation-delay: 0;
+        }
+        .line-6 {
+            animation-delay: 200ms;
+        }
+        .line-7 {
+            animation-delay: 400ms;
+        }
+        .line-8 {
+            animation-delay: 600ms;
+        }
+        .line-9 {
+            animation-delay: 800ms;
+        }
+    }
+    .loading-text {
+        font-size: $spinner-loading-font-size;
+        color: $spinner-loading-font-color;
+        letter-spacing: .1em;
+        text-align: center;
+    }
+    &.primary {
+        .loading {
+            .line {
+                background: $color-primary;
+            }
+        }
+        .loading-text {
+            color: $color-primary;
+        }
+    }
+    &.info {
+        .loading {
+            .line {
+                background: $color-info;
+            }
+        }
+        .loading-text {
+            color: $color-info;
+        }
+    }
+    &.danger {
+        .loading {
+            .line {
+                background: $color-danger;
+            }
+        }
+        .loading-text {
+            color: $color-danger;
+        }
+    }
+    &.warning {
+        .loading {
+            .line {
+                background: $color-warning;
+            }
+        }
+        .loading-text {
+            color: $color-warning;
+        }
+    }
+    &.success {
+        .loading {
+            .line {
+                background: $color-success;
+            }
+        }
+        .loading-text {
+            color: $color-success;
+        }
+    }
+    &.purple {
+        .loading {
+            .line {
+                background: $color-purple;
+            }
+        }
+        .loading-text {
+            color: $color-purple;
+        }
+    }
+}
+
+@keyframes opacityLoading {
+    0% {
+        opacity: 1;
+        height: 16px;
+    }
+    50% {
+        opacity: 0;
+        height: 12px;
+    }
+    100% {
+        opacity: 1;
+        height: 16px;
+    }
+}
+
+@keyframes opacityLoadingM {
+    0% {
+        opacity: 1;
+        height: px2rem(16px);
+    }
+    50% {
+        opacity: 0;
+        height: px2rem(12px);
+    }
+    100% {
+        opacity: 1;
+        height: px2rem(16px);
+    }
+}
+
+@media screen and (max-device-width: $screen-md) {
+    .at-spinner {
+        padding: px2rem(16px);
+        .loading {
+            height: px2rem(16px);
+            .line {
+                @include px2px('width', 2px);
+                height: px2rem(16px);
+                @include px2px('margin', 0 4px 0 4px);
+                animation: opacityLoadingM 1000ms infinite ease-in-out;
+            }
+            .line-1 {
+                animation-delay: 800ms;
+            }
+            .line-2 {
+                animation-delay: 600ms;
+            }
+            .line-3 {
+                animation-delay: 400ms;
+            }
+            .line-4 {
+                animation-delay: 200ms;
+            }
+            .line-5 {
+                animation-delay: 0;
+            }
+            .line-6 {
+                animation-delay: 200ms;
+            }
+            .line-7 {
+                animation-delay: 400ms;
+            }
+            .line-8 {
+                animation-delay: 600ms;
+            }
+            .line-9 {
+                animation-delay: 800ms;
+            }
+        }
+        .loading-text {
+            font-size: px2rem($spinner-loading-font-size);
+        }
+    }
+}

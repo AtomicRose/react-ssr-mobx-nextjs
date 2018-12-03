@@ -5,6 +5,7 @@ import Row from 'COMPONENTS/atoms/Row'
 import Input from 'COMPONENTS/atoms/Input'
 import { Radio, RadioGroup } from 'COMPONENTS/atoms/Radio'
 import { Checkbox, CheckboxGroup } from 'COMPONENTS/atoms/Checkbox'
+import Spinner from 'COMPONENTS/atoms/Spinner'
 export {
     Button,
     ButtonGroup,
@@ -14,5 +15,6 @@ export {
     Radio,
     RadioGroup,
     Checkbox,
-    CheckboxGroup
+    CheckboxGroup,
+    Spinner
 }

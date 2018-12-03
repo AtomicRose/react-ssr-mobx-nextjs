@@ -85,7 +85,7 @@
             width: px2rem($radio-circle-r * 2);
             height: px2rem($radio-circle-r * 2);
             border-radius: px2rem($radio-circle-r);
-            border: px2px(2px) solid $color-border-gray;
+            @include px2px('border', 2px solid $color-border-gray);
             margin-top: px2rem(($radio-box-height - $radio-circle-r * 2) / 2);
             &::after {
                 width: px2rem($radio-circle-r);
