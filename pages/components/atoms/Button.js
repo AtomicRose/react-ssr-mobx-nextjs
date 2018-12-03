@@ -11,7 +11,7 @@ class Button extends React.Component {
         const purely = this.props.purely ? 'purely' : ''
         const disable = !!this.props.disabled || false
         return (
-            <button type={type} disabled={disable} style={this.props.style} className={`${style['at-btn']} ${style[size]} ${style[theme]} ${purely ? style[purely] : ''}`}>
+            <button type={type} onClick={this.props.onClick} disabled={disable} style={this.props.style} className={`${style['at-btn']} ${style[size]} ${style[theme]} ${purely ? style[purely] : ''}`}>
                 {this.props.children}
             </button>
         )

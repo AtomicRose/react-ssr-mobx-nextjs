@@ -3,11 +3,23 @@ import style from 'SCSS/components/atoms/spinner.scss'
 class Spinner extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            display: this.props.loading === false ? 'none' : 'inline-block'
+        }
+    }
+    componentDidMount() {
+        if (this.props.delay) {
+            setTimeout(() => {
+                this.setState({
+                    display: 'none'
+                })
+            }, this.props.delay)
+        }
     }
     render() {
         const theme = this.props.theme || 'primary'
         return (
-            <div className={`${style['at-spinner']} ${style[theme]}`}>
+            <div className={`${style['at-spinner']} ${style[theme]}`} style={{ display: this.props.loading === undefined ? this.state.display : (this.props.loading ? 'inline-block' : 'none') }}>
                 <div className={style['loading']}>
                     <span className={`${style['line']} ${style['line-1']}`}></span>
                     <span className={`${style['line']} ${style['line-2']}`}></span>
