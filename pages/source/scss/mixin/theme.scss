@@ -101,7 +101,13 @@ $checkbox-box-height: 32px;
 $checkbox-circle-r: 8px;
 $checkbox-padding: 8px;
 $checkbox-font-size: 12px;
-//Spinner 
+// Spinner 
 $spinner-loading-color: $color-primary;
 $spinner-loading-font-size: 12px;
 $spinner-loading-font-color: $color-primary;
+// Dialog toast
+$toast-top: 16px;
+$toast-padding: 8px;
+$toast-background-color-pc: rgba(255, 255, 255, .8);
+$toast-background-color-mobile: rgba(0, 0, 0, .6);
+$toast-border-color: $toast-background-color-mobile;

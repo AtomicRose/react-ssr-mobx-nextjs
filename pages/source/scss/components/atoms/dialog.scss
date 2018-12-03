@@ -1,8 +1,14 @@
 @import "../../common/common.scss";
 @import "../../mixin/theme.scss";
 @import "../../mixin/fn.scss";
-.at-dialog {
-    
+.at-dialog-toast {
+    position: fixed;
+    top: $toast-top;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: $toast-padding;
+    background: $toast-background-color-pc;
+    border: 1px solid $toast-border-color;
 }
 
 @media screen and (max-device-width: $screen-md) {

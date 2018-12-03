@@ -6,6 +6,7 @@ import Input from 'COMPONENTS/atoms/Input'
 import { Radio, RadioGroup } from 'COMPONENTS/atoms/Radio'
 import { Checkbox, CheckboxGroup } from 'COMPONENTS/atoms/Checkbox'
 import Spinner from 'COMPONENTS/atoms/Spinner'
+import Dialog from 'COMPONENTS/atoms/Dialog'
 export {
     Button,
     ButtonGroup,
@@ -16,5 +17,6 @@ export {
     RadioGroup,
     Checkbox,
     CheckboxGroup,
-    Spinner
+    Spinner,
+    Dialog
 }
