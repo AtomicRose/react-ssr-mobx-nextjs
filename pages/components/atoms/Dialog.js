@@ -22,18 +22,37 @@ class Dialog extends React.Component {
         }
     }
 }
-const destory = (div) => {
-    ReactDOM.unmountComponentAtNode(div)
-    div.parentNode.removeChild(div)
+const destory = (div, props) => {
+    const id = div.getAttribute('id')
+    if (document.getElementById(id)) {
+        if (props.beforeClose && props.beforeClose(props)) {
+            ReactDOM.unmountComponentAtNode(div)
+            div.parentNode.removeChild(div)
+            props.afterClose && props.afterClose(props)
+        }
+    }
 }
 const renderDialog = (props) => {
+    let dialogContainer = document.getElementById(`dialog_${props.type}`)
+    if (!dialogContainer) {
+        dialogContainer = document.createElement('div')
+        dialogContainer.id = `dialog_${props.type}`
+        dialogContainer.className = style['at-dialog-toast-container']
+        document.body.appendChild(dialogContainer)
+    }
     let dialogDIV = document.createElement('div')
-    document.body.appendChild(dialogDIV)
+    dialogDIV.id = `dialog_${props.type}_${new Date().getTime()}`
+    dialogContainer.appendChild(dialogDIV)
+    props.id = dialogDIV.id
     ReactDOM.render(<Dialog {...props} />, dialogDIV)
+    if (props.max && props.max > 0) {
+        if (dialogContainer.childNodes.length > props.max) {
+            destory(dialogContainer.firstChild, props)
+        }
+    }
     if (props.delay && props.delay > 0) {
         setTimeout(() => {
-            destory(dialogDIV)
-            props.afterClose()
+            destory(dialogDIV, props)
         }, props.delay)
     }
     return dialogDIV
@@ -45,6 +64,8 @@ export default {
     },
     toast: (text, config) => {
         let opts = Object.assign({
+            type: 'toast',
+            content: text,
             beforeClose: () => {
                 return true;
             },
@@ -52,16 +73,19 @@ export default {
 
             },
             theme: 'default',
+            max: 5,
             delay: 2000
         }, config)
-        const ele = renderDialog({
-            type: 'toast',
-            content: text,
-            beforeClose: opts.beforeClose,
-            afterClose: opts.afterClose,
-            delay: opts.delay,
-            theme: opts.theme
-        })
+        const ele = renderDialog(opts)
         return ele
+    },
+    alert: (config) => {
+
+    },
+    confirm: (config) => {
+
+    },
+    modal: (config) => {
+
     }
 }

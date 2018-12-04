@@ -1,16 +1,89 @@
 @import "../../common/common.scss";
 @import "../../mixin/theme.scss";
 @import "../../mixin/fn.scss";
-.at-dialog-toast {
+.at-dialog-toast-container {
+    max-width: 600px;
     position: fixed;
-    top: $toast-top;
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    padding: $toast-padding;
-    background: $toast-background-color-pc;
-    border: 1px solid $toast-border-color;
+    text-align: center;
+}
+
+.at-dialog-toast {
+    position: relative;
+    left: 50%;
+    margin-top: $toast-top;
+    transform: translate(-50%, 0);
+    padding: $toast-padding $toast-padding * 2;
+    background: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    color: $color-font-6;
+    font-size: 14px;
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
+    &.success {
+        border-color: rgba(red($color-success), green($color-success), blue($color-success), 1);
+        box-shadow: 2px 2px 8px 1px rgba(red($color-success), green($color-success), blue($color-success), .5);
+    }
+    &.warning {
+        border-color: rgba(red($color-warning), green($color-warning), blue($color-warning), 1);
+        box-shadow: 2px 2px 8px 1px rgba(red($color-warning), green($color-warning), blue($color-warning), .5);
+    }
+    &.info {
+        border-color: rgba(red($color-info), green($color-info), blue($color-info), 1);
+        box-shadow: 2px 2px 8px 1px rgba(red($color-info), green($color-info), blue($color-info), .5);
+    }
+    &.danger {
+        border-color: rgba(red($color-danger), green($color-danger), blue($color-danger), 1);
+        box-shadow: 2px 2px 8px 1px rgba(red($color-danger), green($color-danger), blue($color-danger), .5);
+    }
+    &.purple {
+        border-color: rgba(red($color-purple), green($color-purple), blue($color-purple), 1);
+        box-shadow: 2px 2px 8px 1px rgba(red($color-purple), green($color-purple), blue($color-purple), .5);
+    }
+    span {
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        vertical-align: middle;
+    }
 }
 
 @media screen and (max-device-width: $screen-md) {
+    .at-dialog-toast-container {
+        max-width: 80%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .at-dialog-toast {
+        background: rgba(0, 0, 0, .6);
+        color: #fff;
+        margin-top: px2rem($toast-top);
+        padding: px2rem($toast-padding) px2rem($toast-padding * 2);
+        border: none;
+        border-radius: px2rem(4px);
+        font-size: px2rem(14px);
+        box-shadow: none;
+        &.success {
+            color: $color-success;
+        }
+        &.warning {
+            color: $color-warning;
+        }
+        &.info {
+            color: $color-info;
+        }
+        &.danger {
+            color: $color-danger;
+        }
+        &.purple {
+            color: $color-light-purple;
+        }
 
+    }
 }

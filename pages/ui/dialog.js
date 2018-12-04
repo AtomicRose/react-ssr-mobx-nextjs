@@ -6,11 +6,13 @@ class SpinnerPage extends React.Component {
     constructor(props) {
         super(props)
     }
-    handleOpen() {
-        Dialog.toast('This is toast', {
-            afterClose: () => {
-                console.log('Oh, i close by delay time')
-            }
+    handleOpenToast(t) {
+        Dialog.toast('This is toast ' + new Array(Math.ceil(Math.random() * 60)).join('Haha '), {
+            afterClose: (props) => {
+                console.log('Oh, i close by delay time', props)
+            },
+            theme: t,
+            delay: 100000
         })
     }
     render() {
@@ -18,7 +20,12 @@ class SpinnerPage extends React.Component {
             <div>
                 <Row>
                     <Col>
-                        <Button onClick={() => this.handleOpen()}>Open dialog</Button>
+                        <Button size="small" theme="default" onClick={() => this.handleOpenToast('default')}>Open Toast default</Button>
+                        <Button size="small" theme="success" onClick={() => this.handleOpenToast('success')}>Open Toast success</Button>
+                        <Button size="small" theme="info" onClick={() => this.handleOpenToast('info')}>Open Toast info</Button>
+                        <Button size="small" theme="warning" onClick={() => this.handleOpenToast('warning')}>Open Toast warning</Button>
+                        <Button size="small" theme="danger" onClick={() => this.handleOpenToast('danger')}>Open Toast danger</Button>
+                        <Button size="small" theme="purple" onClick={() => this.handleOpenToast('purple')}>Open Toast purple</Button>
                     </Col>
                 </Row>
             </div>
