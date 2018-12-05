@@ -1,6 +1,12 @@
 @import "../../common/common.scss";
 @import "../../mixin/theme.scss";
 @import "../../mixin/fn.scss";
+.dialog-mask {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .6);
+}
+
 .at-dialog-toast-container {
     max-width: 600px;
     position: fixed;
@@ -79,6 +85,76 @@
         border-color: rgba(red($color-purple), green($color-purple), blue($color-purple), 1);
         box-shadow: 2px 2px 8px 1px rgba(red($color-purple), green($color-purple), blue($color-purple), .5);
         .toast-icon {
+            color: $color-purple;
+        }
+    }
+}
+
+.at-dialog-alert-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.at-dialog-confirm-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.at-dialog-alert {
+    width: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
+    .alert-title {
+        width: 100%;
+        height: $alert-title-height;
+        line-height: $alert-title-height;
+        text-align: center;
+        font-size: $alert-title-font-size;
+        border-bottom: 1px dashed $color-border-light-gray;
+        color: $color-font-6;
+        font-weight: bold;
+    }
+    .alert-content {
+        padding: $alert-padding;
+        font-size: $alert-content-font-size;
+        color: $color-font-6;
+    }
+    .alert-button {}
+    &.info {
+        .alert-title {
+            color: $color-info;
+        }
+    }
+    &.primary {
+        .alert-title {
+            color: $color-primary;
+        }
+    }
+    &.success {
+        .alert-title {
+            color: $color-success;
+        }
+    }
+    &.warning {
+        .alert-title {
+            color: $color-warning;
+        }
+    }
+    &.danger {
+        .alert-title {
+            color: $color-danger;
+        }
+    }
+    &.purple {
+        .alert-title {
             color: $color-purple;
         }
     }
