@@ -1,3 +1,13 @@
 @import "../../common/common.scss";
 @import "../../mixin/theme.scss";
 @import "../../mixin/fn.scss";
+.at-icon {
+    display: inline-block;
+    font-size: 24px;
+}
+
+@media screen and (max-device-width: $screen-md) {
+    .at-icon {
+        font-size: px2rem(24px);
+    }
+}

@@ -11,6 +11,8 @@
 }
 
 .at-dialog-toast {
+    display: flex;
+    flex-direction: row;
     position: relative;
     left: 50%;
     margin-top: $toast-top;
@@ -24,33 +26,61 @@
     color: $color-font-6;
     font-size: 14px;
     box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
-    &.success {
-        border-color: rgba(red($color-success), green($color-success), blue($color-success), 1);
-        box-shadow: 2px 2px 8px 1px rgba(red($color-success), green($color-success), blue($color-success), .5);
+    .icon-container {
+        padding-right: 16px;
+        .icon-box {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
-    &.warning {
-        border-color: rgba(red($color-warning), green($color-warning), blue($color-warning), 1);
-        box-shadow: 2px 2px 8px 1px rgba(red($color-warning), green($color-warning), blue($color-warning), .5);
-    }
-    &.info {
-        border-color: rgba(red($color-info), green($color-info), blue($color-info), 1);
-        box-shadow: 2px 2px 8px 1px rgba(red($color-info), green($color-info), blue($color-info), .5);
-    }
-    &.danger {
-        border-color: rgba(red($color-danger), green($color-danger), blue($color-danger), 1);
-        box-shadow: 2px 2px 8px 1px rgba(red($color-danger), green($color-danger), blue($color-danger), .5);
-    }
-    &.purple {
-        border-color: rgba(red($color-purple), green($color-purple), blue($color-purple), 1);
-        box-shadow: 2px 2px 8px 1px rgba(red($color-purple), green($color-purple), blue($color-purple), .5);
-    }
-    span {
+    .text {
         display: inline-block;
         width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
-        text-align: center;
+        text-align: left;
         vertical-align: middle;
+    }
+    .toast-icon {
+        font-size: 24px;
+        color: $color-primary;
+    }
+    &.success {
+        border-color: rgba(red($color-success), green($color-success), blue($color-success), 1);
+        box-shadow: 2px 2px 8px 1px rgba(red($color-success), green($color-success), blue($color-success), .5);
+        .toast-icon {
+            color: $color-success;
+        }
+    }
+    &.warning {
+        border-color: rgba(red($color-warning), green($color-warning), blue($color-warning), 1);
+        box-shadow: 2px 2px 8px 1px rgba(red($color-warning), green($color-warning), blue($color-warning), .5);
+        .toast-icon {
+            color: $color-warning;
+        }
+    }
+    &.info {
+        border-color: rgba(red($color-info), green($color-info), blue($color-info), 1);
+        box-shadow: 2px 2px 8px 1px rgba(red($color-info), green($color-info), blue($color-info), .5);
+        .toast-icon {
+            color: $color-info;
+        }
+    }
+    &.danger {
+        border-color: rgba(red($color-danger), green($color-danger), blue($color-danger), 1);
+        box-shadow: 2px 2px 8px 1px rgba(red($color-danger), green($color-danger), blue($color-danger), .5);
+        .toast-icon {
+            color: $color-danger;
+        }
+    }
+    &.purple {
+        border-color: rgba(red($color-purple), green($color-purple), blue($color-purple), 1);
+        box-shadow: 2px 2px 8px 1px rgba(red($color-purple), green($color-purple), blue($color-purple), .5);
+        .toast-icon {
+            color: $color-purple;
+        }
     }
 }
 
@@ -69,6 +99,12 @@
         border-radius: px2rem(4px);
         font-size: px2rem(14px);
         box-shadow: none;
+        .icon-container {
+            display: none;
+        }
+        .text {
+            text-align: center;
+        }
         &.success {
             color: $color-success;
         }
@@ -84,6 +120,5 @@
         &.purple {
             color: $color-light-purple;
         }
-
     }
 }

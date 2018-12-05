@@ -1,6 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Icon } from 'COMPONENTS/at-ui'
 import style from 'SCSS/components/atoms/dialog.scss'
+const themeIcon = {
+    info: 'info-circle',
+    success: 'check-circle',
+    warning: 'question-circle',
+    primary: 'info-circle',
+    purple: 'tag',
+    danger: 'error'
+}
 class Dialog extends React.Component {
     constructor(props) {
         super(props)
@@ -11,8 +20,14 @@ class Dialog extends React.Component {
             case 'toast': {
                 return (
                     <div className={`${style['at-dialog-toast']} ${style[theme]}`}>
-                        {/* TODO ICON */}
-                        <span>{this.props.content}</span>
+                        <div className={style['icon-container']}>
+                            <div className={style['icon-box']}>
+                                <Icon type={themeIcon[theme] || 'info-circle'} className={`${style['toast-icon']}`} />
+                            </div>
+                        </div>
+                        <div className={style['text-container']}>
+                            <div className={style['text']}>{this.props.content}</div>
+                        </div>
                     </div>
                 )
             }
