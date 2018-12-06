@@ -1,7 +1,8 @@
 const support = {
     'zh_CN': {
         app: require('./zh_CN/app').default,
-        example: require('./zh_CN/example').default
+        example: require('./zh_CN/example').default,
+        navigation: require('./zh_CN/navigation').default
     },
     'en_US': {
         app: require('./en_US/app').default,

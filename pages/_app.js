@@ -8,6 +8,7 @@ import Head from 'next/head'
 import DevTools from 'mobx-react-devtools'
 
 import EmptyLayout from 'COMPONENTS/templates/EmptyLayout'
+import IslandLayout from 'COMPONENTS/templates/IslandLayout'
 @inject('rootStore')
 @observer
 class PropComponent extends React.Component {
@@ -29,7 +30,13 @@ class PropComponent extends React.Component {
                     </EmptyLayout>
                 )
                 break;
-
+            case 'island': 
+                render = (
+                     <IslandLayout language={this.props.language} rootStore={this.props.rootStore} router={this.props.router}>
+                        <Component {...pageProps} language={this.props.language} rootStore={this.props.rootStore} router={this.props.router} />
+                    </IslandLayout>
+                )
+                break;
             default:
                 render = (
                     <EmptyLayout language={this.props.language} rootStore={this.props.rootStore} router={this.props.router}>

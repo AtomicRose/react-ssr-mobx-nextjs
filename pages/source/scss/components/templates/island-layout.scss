@@ -1,0 +1,19 @@
+@import "../../common/common.scss";
+@import "../../mixin/theme.scss";
+@import "../../mixin/fn.scss";
+
+.coolly-island-layout {
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media screen and (max-device-width: $screen-md) {
+    .coolly-island-layout {
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+}
