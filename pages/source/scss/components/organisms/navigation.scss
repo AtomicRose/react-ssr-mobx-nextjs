@@ -3,6 +3,87 @@
 @import "../../mixin/fn.scss";
 .coolly-navigation {
     width: 100%;
-    height: $navigation-height;
+    height: $navigation-height-pc;
+    overflow: hidden;
+    ul {
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        li {
+            float: left;
+            a {
+                display: inline-block;
+                line-height: $navigation-height-pc;
+                font-size: 16px;
+                color: $color-triple-dark-primary;
+                min-width: 80px;
+                max-width: 100px;
+                text-align: center;
+                text-decoration: none;
+                .nav-icon {
+                    display: none;
+                }
+                &.active {
+                    color: #fff;
+                    background: $color-dark-primary;
+                }
+                &:hover {
+                    color: #fff;
+                    background: $color-dark-primary;
+                }
+            }
+        }
+    }
+    .coolly-navigation-item4 {
+        display: none;
+    }
 }
-@media screen and (max-device-width: $screen-md) {}
+
+@media screen and (max-device-width: $screen-md) {
+    .coolly-navigation {
+        height: px2rem($navigation-height-mobile);
+        ul {
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            display: flex;
+            li {
+                display: inline-block;
+                flex: 1;
+                a {
+                    display: inline-block;
+                    min-width: 100%;
+                    max-width: 100%;
+                    height: px2rem($navigation-height-mobile);
+                    line-height: 100%;
+                    font-size: px2rem(16px);
+                    color: $color-font-9;
+                    text-align: center;
+                    text-decoration: none;
+                    position: relative;
+                    .nav-icon {
+                        display: inline-block;
+                        margin-top: px2rem(10px);
+                        width: 100%;
+                    }
+                    .nav-text {
+                        font-size: px2rem(10px);
+                        width: 100%;
+                        text-align: center;
+                    }
+                    &.active {
+                        color: $color-dark-primary;
+                        background: #fff;
+                    }
+                    &:hover {
+                        color: #fff;
+                        background: $color-dark-primary;
+                    }
+                }
+            }
+        }
+        .coolly-navigation-item4 {
+            display: inherit;
+        }
+    }
+}

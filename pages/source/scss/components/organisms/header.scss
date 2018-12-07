@@ -1,4 +1,47 @@
 @import "../../common/common.scss";
 @import "../../mixin/theme.scss";
 @import "../../mixin/fn.scss";
-@media screen and (max-device-width: $screen-md) {}
+.coolly-header-pc {
+    display: block;
+    .coolly-header-pc-content {
+        max-width: $pc-content-max-width;
+        height: inherit;
+        margin: 0 auto;
+    }
+    .coolly-header-logo {
+        float: left;
+        line-height: $header-height-pc;
+        font-size: 28px;
+        color: $color-purple;
+    }
+    .coolly-header-pc-nav {
+        float: left;
+        margin-left: $block-size-4;
+    }
+    .coolly-header-pc-login {
+        float: right;
+    }
+}
+
+.coolly-header-mobile {
+    display: none;
+}
+
+@media screen and (max-device-width: $screen-md) {
+    .coolly-header-pc {
+        display: none;
+    }
+    .coolly-header-mobile {
+        display: flex;
+        height: px2rem($header-height-mobile);
+        .header-mobile-left {
+            width: px2rem(60px);
+        }
+        .header-mobile-middle {
+            flex: 1;
+        }
+        .header-mobile-right {
+            width: px2rem(60px);
+        }
+    }
+}

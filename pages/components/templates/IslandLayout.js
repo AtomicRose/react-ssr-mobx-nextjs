@@ -22,14 +22,14 @@ class IslandLayout extends React.Component {
             <Provider rootStore={this.rootStore}>
                 <div className={style['coolly-island-layout']}>
                     <div className={style['coolly-island-header-container']}>
-                        <HeaderPC />
-                        <HeaderMobile />
+                        <HeaderPC {...this.props} />
+                        <HeaderMobile {...this.props} />
                     </div>
                     <div className={style['coolly-island-content-container']}>
                         {this.props.children}
                     </div>
                     <div className={style['colly-island-footer-container']}>
-                        <Navigation language={language} />
+                        <Navigation {...this.props} />
                     </div>
                 </div>
             </Provider>

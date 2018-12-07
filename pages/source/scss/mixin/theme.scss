@@ -113,9 +113,15 @@ $alert-padding: 16px;
 $alert-title-height: 48px;
 $alert-title-font-size: 16px;
 $alert-content-font-size: 14px;
-
 // Header
-$header-height: 60px;
-
+$header-height-pc: 60px;
+$header-height-mobile: 48px;
+$header-background: $color-primary;
+// Footer
+$footer-height-mobile: 52px;
+$footer-background-mobile: #fff;
 // Navigation
-$navigation-height: $header-height;
+$navigation-height-pc: $header-height-pc;
+$navigation-height-mobile: $footer-height-mobile;
+// pc content
+$pc-content-max-width: 1280px;

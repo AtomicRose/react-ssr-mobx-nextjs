@@ -1,11 +1,29 @@
 @import "../../common/common.scss";
 @import "../../mixin/theme.scss";
 @import "../../mixin/fn.scss";
-
 .coolly-island-layout {
     width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+    .coolly-island-header-container {
+        width: 100%;
+        height: $header-height-pc;
+        background: $header-background;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .coolly-island-content-container {
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-top: $header-height-pc;
+    }
+    .colly-island-footer-container {
+        display: none;
+    }
 }
 
 @media screen and (max-device-width: $screen-md) {
@@ -15,5 +33,23 @@
         overflow-y: hidden;
         display: flex;
         flex-direction: column;
+        .coolly-island-header-container {
+            height: px2rem($header-height-mobile);
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        .coolly-island-content-container {
+            flex: 1;
+            padding-top: 0;
+        }
+        .colly-island-footer-container {
+            display: block;
+            width: 100%;
+            height: px2rem($footer-height-mobile);
+            background: $footer-background-mobile;
+            @include px2px('border-top', 1px solid $color-border-gray);
+            overflow: hidden;
+        }
     }
 }

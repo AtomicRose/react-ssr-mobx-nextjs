@@ -3,7 +3,8 @@ function setRouters(nextApp) {
     router.get('/', async (ctx, next) => {
         const actualPage = '/travel_home'
         const queryParams = {
-            layout: 'island'
+            layout: 'island',
+            island: 'home'
         }
         await nextApp.render(ctx.req, ctx.res, actualPage, queryParams)
     })
