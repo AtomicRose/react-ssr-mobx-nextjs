@@ -5,9 +5,13 @@ class HeaderMobile extends React.Component {
     render() {
         return (
             <div className={style['coolly-header-mobile']}>
-                <div className={style['header-mobile-left']}>left</div>
-                <div className={style['header-mobile-middle']}>title</div>
-                <div className={style['header-mobile-right']}>right</div>
+                <div className={style['header-mobile-left']}>
+                    Left
+                </div>
+                <div className={style['header-mobile-middle']}>Home</div>
+                <div className={style['header-mobile-right']}>
+                    Right
+                </div>
             </div>
         )
     }
