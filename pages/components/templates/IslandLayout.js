@@ -17,19 +17,19 @@ class IslandLayout extends React.Component {
         this.rootStore = initRootStore(props.isServer)
     }
     render() {
-        const { language } = this.props
+        const { language, router } = this.props
         return (
             <Provider rootStore={this.rootStore}>
                 <div className={style['coolly-island-layout']}>
                     <div className={style['coolly-island-header-container']}>
-                        <HeaderPC {...this.props} />
-                        <HeaderMobile {...this.props} />
+                        <HeaderPC language={language} router={router} />
+                        <HeaderMobile language={language} router={router} />
                     </div>
                     <div className={style['coolly-island-content-container']}>
                         {this.props.children}
                     </div>
                     <div className={style['colly-island-footer-container']}>
-                        <Navigation {...this.props} />
+                        <Navigation language={language} router={router} />
                     </div>
                 </div>
             </Provider>

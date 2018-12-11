@@ -7,7 +7,7 @@ class Navigation extends React.Component {
     render() {
         const { language, router } = this.props
         const langText = I18N.langText(language)
-        const navigationList = langText.navigation
+        const navigationList = langText.navigation || []
         let navs = []
         navigationList.map((item, index) => {
             navs.push(

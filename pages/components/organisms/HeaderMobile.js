@@ -26,7 +26,7 @@ class HeaderMobile extends React.Component {
                 <div className={style['header-mobile-left']}>
                     {leftOperation === 'close' ? <Icon type="coolly-icon-close-circle" className={style['coolly-header-icon']} onClick={() => this.handleClickBack('close')} /> : <Icon type="coolly-icon-left" className={style['coolly-header-icon']} onClick={() => this.handleClickBack('back')} />}
                 </div>
-                <div className={style['header-mobile-middle']}>Home</div>
+                <div className={style['header-mobile-middle']}>{this.props.title}</div>
                 <div className={style['header-mobile-right']}>
                     {rightOperation === 'more' ? <Icon type="coolly-icon-menu" className={style['coolly-header-icon']} onClick={this.props.moreFn} /> : null}
                     {rightOperation === 'extra' ? ExtraRightOperation : null}
