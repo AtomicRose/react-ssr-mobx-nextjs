@@ -9,7 +9,7 @@ class Icon extends React.Component {
         const type = this.props.type
         const theme = this.props.theme
         return (
-            <span className={`${iconfontStyle['iconfont']} ${iconfontStyle[type]} ${iconStyle['at-icon']} ${iconStyle[theme]} ${extraClass}`} style={extraStyle}></span>
+            <span className={`${iconfontStyle['iconfont']} ${iconfontStyle[type]} ${iconStyle['at-icon']} ${iconStyle[theme]} ${extraClass}`} style={extraStyle} onClick={this.props.onClick}></span>
         )
     }
 }
