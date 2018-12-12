@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Icon, Button } from 'COMPONENTS/at-ui'
+import { Icon, Button, Spinner } from 'COMPONENTS/at-ui'
 import style from 'SCSS/components/atoms/dialog.scss'
 const themeIcon = {
     info: 'info-circle',
@@ -125,6 +125,16 @@ class Dialog extends React.Component {
                     </div>
                 )
             }
+            case 'spinner': {
+                return (
+                    <div>
+                        {this.props.enableMask && <div className={style['dialog-mask']} onClick={() => this.handleClickMask(this.props)}></div>}
+                        <div className={`${style['at-dialog-alert']} ${style[theme]}`}>
+                            <Spinner theme={this.props.theme} loadText={this.props.loadText} />
+                        </div>
+                    </div>
+                )
+            }
             default: {
                 return null
             }
@@ -193,7 +203,21 @@ export default {
         const ele = renderDialog(opts)
         return ele
     },
-    modal: (config) => {
+    spinner: (config) => {
+        let opts = Object.assign({
+            type: 'spinner',
+            content: config.loadText,
+            beforeClose: () => {
+                return true;
+            },
+            afterClose: () => {
 
+            },
+            theme: 'default',
+            max: 5,
+            delay: 2000
+        }, config)
+        const ele = renderDialog(opts)
+        return ele
     }
 }

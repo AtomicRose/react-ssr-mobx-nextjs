@@ -79,6 +79,12 @@ class SpinnerPage extends React.Component {
                         <Button size="small" theme="purple" onClick={() => this.handleOpenConfirm('purple')}>Open Confirm purple</Button>
                     </Col>
                 </Row>
+                <Row style={{ marginTop: '16px' }}>
+                    <Col>
+                        <Button size="small" theme="default" onClick={() => this.handleOpenLoading('spinner')}>Open Spinner</Button>
+                        <Button size="small" theme="success" onClick={() => this.handleOpenLoading('pageLoading')}>Open Page loading</Button>
+                    </Col>
+                </Row>
             </div>
         )
     }
