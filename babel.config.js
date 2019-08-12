@@ -8,7 +8,10 @@ const presets = [
                 chrome: "67",
                 safari: "11.1",
             },
-            useBuiltIns: "usage",
+            corejs: {
+                version: 3,
+                proposals: true
+            },
         },
     ],
     ["next/babel"]
